@@ -1,0 +1,60 @@
+/* Colors */
+:root {
+    /* Text */
+    --text-dark-color: #403F3D;
+    --text-light-color: #E1D4C9;
+    --text-accent-color: #B0907A;
+
+    /* Background */
+    --body-background-color: #E1D4C9;
+    --container-background-color: #665F55;
+    --backdrop-background-color: #403F3D;
+
+    /* Border */
+    --border-light-color: #C1B6AD;
+    --border-dark-color: #665F55;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text-dark-color);
+    background-color: var(--border-light-color);
+}
+
+/* Utility */
+.none {
+    display: none !important;
+}
+
+/* Search engines will be able to see the elements with this tag,
+  but it will be hidden from our eyes */
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    display: block;
+    margin-left: -10000px;
+    background: transparent;
+    font-size: 0;
+}
+
+/* Grid */
+.content {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--body-background-color);
+}
+.container {
+    width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+
