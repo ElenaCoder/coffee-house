@@ -24,7 +24,7 @@
 
 
 .header-nav li:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 2.5rem; /* Equivalent to 40px */
 }
 
 .header-nav ul li a {
@@ -34,17 +34,13 @@
     transition: text-decoration 0.3s ease;
 }
 
-.header-nav ul li a:hover {
-    /* text-decoration: underline; */
-}
-
 .header-nav ul li a:hover::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -5px;
-    height: 2px;
+    bottom: -0.3125rem; /* Equivalent to 5px */
+    height: 0.125rem; /* Equivalent to 2px */
     background-color: var(--text-dark-color);
 }
 
@@ -55,5 +51,5 @@
 }
 
 .menu {
-    margin-right: 8px;
+    margin-right: 0.5rem; /* Equivalent to 8px */
 }
