@@ -1,0 +1,45 @@
+.button-primary {
+    box-sizing: border-box;
+    width: 200px;
+    height: 64px;
+    display: inline-block;
+    position: relative;
+    padding: 20px 78px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100px;
+    color: var(--text-dark-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-background-color);
+}
+
+.button-primary:hover .cup-icon {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.button-primary:hover .btn-content {
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-content {
+    display: inline-block;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.cup-icon {
+    position: absolute;
+    left: 62%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
