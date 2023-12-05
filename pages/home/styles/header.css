@@ -1,3 +1,7 @@
+.header {
+    margin-bottom: 20px;
+}
+
 .header-row {
     display: flex;
     flex-direction: row;
@@ -22,7 +26,6 @@
     margin: 0;
 }
 
-
 .header-nav li:not(:last-child) {
     margin-right: 2.5rem; /* Equivalent to 40px */
 }
@@ -35,7 +38,7 @@
 }
 
 .header-nav ul li a:hover::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
