@@ -43,3 +43,115 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
+/* ---------button-app-store-------- */
+
+.button-app-store {
+    box-sizing: border-box;
+    width: 200px;
+    height: 64px;
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100px;
+    color: var(--text-dark-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: var(--body-background-color);
+    border: 1px solid var(--text-dark-color);
+    padding: 12px 54px 12px 20px;
+}
+
+.apple-icon {
+    margin-right: 8px;
+    content: url('../../assets/icons/apple-icon-dark.svg');
+    transition: content 0.1s;
+}
+
+.btn-store-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-store-content div:first-child {
+    font-size: 10px;
+    line-height: 140%;
+    margin-bottom: 2px;
+}
+
+.btn-store-content div:last-child {
+    font-size: 1rem;
+}
+
+.button-app-store:hover {
+    color: var(--text-light-color);
+    background-color: var(--border-dark-color);
+    transition: background-color 0.1s ease;
+    transition: color 0.1s ease;
+}
+
+.button-app-store:hover .apple-icon {
+    content: url('../../assets/icons/apple-icon-light.svg');
+}
+
+/* ---------button-google-play-------- */
+.button-google-play {
+    box-sizing: border-box;
+    width: 200px;
+    height: 64px;
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 100px;
+    color: var(--text-dark-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: var(--body-background-color);
+    border: 1px solid var(--text-dark-color);
+    padding: 12px 40px 12px 20px;
+}
+
+.google-play-icon {
+    margin-right: 8px;
+    content: url('../../assets/icons/google-play-icon-dark.svg');
+    transition: content 0.1s;
+}
+
+.btn-google-play-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-google-play-content div:first-child {
+    font-size: 10px;
+    line-height: 140%;
+    margin-bottom: 2px;
+    align-self: flex-start;
+}
+
+.btn-google-play-content div:last-child {
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.button-google-play:hover {
+    color: var(--text-light-color);
+    background-color: var(--border-dark-color);
+    transition: background-color 0.1s ease;
+    transition: color 0.1s ease;
+}
+
+.button-google-play:hover .google-play-icon {
+    content: url('../../assets/icons/google-play-icon-light.svg');
+}
