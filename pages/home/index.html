@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="../../assets/styles/button.css" />
         <link rel="stylesheet" href="./styles/header.css" />
         <link rel="stylesheet" href="./styles/enjoy-block.css" />
+        <link rel="stylesheet" href="./styles/favorite-coffee.css" />
         <link rel="stylesheet" href="./styles/about.css" />
         <link rel="stylesheet" href="./styles/mobile-app.css" />
         <link rel="stylesheet" href="./styles/footer.css" />
@@ -31,6 +32,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&display=swap"
             rel="stylesheet"
         />
+        <script src="./script.js" defer></script>
     </head>
     <body>
         <div class="content">
@@ -78,7 +80,7 @@
             <!--MAIN-->
             <main>
                 <!--SECTION 1 - ENJOY_BLOCK-->
-                <section class="enjoy-block none">
+                <section class="enjoy-block ">
                     <div class="container">
                         <div class="enjoy-block-content">
                             <div class="enjoy-block-heading">
@@ -105,10 +107,60 @@
                 <!--/SECTION 1 - ENJOY_BLOCK-->
 
                 <!--SECTION 2 - FAVORITE_COFFEE-->
+                <section class="favorite-coffee">
+                    <div class="container">
+                        <div class="favorite-coffee-content">
+                            <div class="coffee-heading">
+                                Choose your <span>favorite</span> coffee
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider">
+                                    <div class="card">
+                                        <img src="../../assets/images/coffee-slider-1.png" alt="S’mores Frappuccino">
+                                        <div class="card-text">
+                                            <h3>S’mores Frappuccino</h3>
+                                            <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                            <p>$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img src="../../assets/images/coffee-slider-2.png" alt="Caramel Macchiato">
+                                        <div class="card-text">
+                                            <h3>Caramel Macchiato</h3>
+                                            <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                            <p>$5.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <img src="../../assets/images/coffee-slider-3.png" alt="Ice Coffee">
+                                        <div class="card-text">
+                                            <h3>Ice Coffee</h3>
+                                            <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                            <p>$4.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="arrow next">
+                                    <img src="../../assets/icons/arrow-next-default.svg" alt="Next arrow icon">
+                                </div>
+
+                                  <div class="arrow prev">
+                                    <img src="../../assets/icons/arrow-next-default.svg" alt="Previous arrow icon">
+                                  </div>
+                                  <div class="controls">
+                                    <div class="control darker" data-index="0"></div>
+                                    <div class="control" data-index="1"></div>
+                                    <div class="control" data-index="2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!--SECTION 2 - /FAVORITE_COFFEE-->
 
                 <!--SECTION 3 - ABOUT-->
-                <section class="about none">
+                <section class="about">
                     <div class="container">
                         <div class="about-container">
                             <div class="about-description">Resource is <span>the perfect and cozy place</span> where
@@ -216,7 +268,7 @@
 
             <!--FOOTER-->
             <footer>
-                <div class="container none">
+                <div class="container ">
                     <div class="footer-container">
 
                     <div class="footer-part1">
