@@ -30,21 +30,29 @@
     margin-right: 2.5rem; /* Equivalent to 40px */
 }
 
-.header-nav ul li a {
+.header-nav ul li a,
+a .header-menu {
     color: var(--text-dark-color);
     position: relative;
     text-decoration: none;
-    transition: text-decoration 0.3s ease;
 }
 
-.header-nav ul li a:hover::after {
+.header-nav ul li a::after,
+a .header-menu::after {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 50%;
+    right: 50%;
     bottom: -0.3125rem; /* Equivalent to 5px */
     height: 0.125rem; /* Equivalent to 2px */
     background-color: var(--text-dark-color);
+    transition: left 0.35s ease, right 0.35s ease;
+}
+
+.header-nav ul li a:hover::after,
+a .header-menu:hover::after {
+    left: 0;
+    right: 0;
 }
 
 .header-menu {
