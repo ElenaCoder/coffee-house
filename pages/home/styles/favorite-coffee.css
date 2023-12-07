@@ -1,0 +1,90 @@
+section.favorite-coffee {
+    margin-bottom: 100px;
+}
+
+.coffee-heading {
+    margin-bottom: 40px;
+text-align: center;
+    font-size: 60px;
+    line-height: 125%;
+    color: var(--text-dark-color);
+}
+
+.coffee-heading span {
+    color: var(--text-accent-color);
+}
+.slider-container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    padding: 0 336px;
+}
+
+.card {
+    width: 480px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-right: 336px;
+}
+
+.card img {
+    max-width: 100%;
+    height: 480px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card-text *{
+    width: 480px;
+    text-align: center;
+    margin: 0;
+}
+
+.card-text h3 {
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 125%;
+}
+
+.card-text p{
+    margin-bottom: 16px;
+}
+
+.card-text p:first-child{
+    font-weight: 400;
+}
+
+.card-text p:last-child{
+    font-size: 24px;
+    line-height: 125%;
+}
+
+/* Add styles for controls */
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.control {
+    width: 40px;
+    height: 4px;
+    background-color: var(--border-light-color);
+    margin: 0 5px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control.darker {
+    background-color: var(--border-dark-color);
+}
