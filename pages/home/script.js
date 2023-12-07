@@ -1,3 +1,14 @@
+// Add smooth scrolling behavior to anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
+
 // -------FAVORITE_COFFEE SECTION 3------------
 const slider = document.querySelector('.slider');
 const cards = document.querySelectorAll('.card');
