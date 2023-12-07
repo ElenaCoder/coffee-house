@@ -1,15 +1,15 @@
 .button-primary {
     box-sizing: border-box;
-    width: 200px;
-    height: 64px;
+    width: 12.5rem;  /* Equivalent to 200px */
+    height: 4rem;  /* Equivalent to 64px */
     display: inline-block;
     position: relative;
-    padding: 20px 78px;
+    padding: 1.25rem 4.875rem;  /* Equivalent to 20px 78px */
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 100px;
+    border-radius: 6.25rem;  /* Equivalent to 100px */
     color: var(--text-dark-color);
     overflow: hidden;
     display: flex;
@@ -47,15 +47,15 @@
 
 .button-app-store {
     box-sizing: border-box;
-    width: 200px;
-    height: 64px;
+    width: 12.5rem;  /* Equivalent to 200px */
+    height: 4rem;  /* Equivalent to 64px */
     display: inline-block;
     position: relative;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 100px;
+    border-radius: 6.25rem;  /* Equivalent to 100px */
     color: var(--text-dark-color);
     overflow: hidden;
     display: flex;
@@ -64,11 +64,11 @@
     /* justify-content: center; */
     background-color: var(--body-background-color);
     border: 1px solid var(--text-dark-color);
-    padding: 12px 54px 12px 20px;
+    padding: 0.75rem 3.375rem 0.75rem 1.25rem;  /* Equivalent to 12px 54px 12px 20px */
 }
 
 .apple-icon {
-    margin-right: 8px;
+    margin-right: 0.5rem; /* Equivalent to 100px */
     content: url('../../assets/icons/apple-icon-dark.svg');
     transition: content 0.1s;
 }
@@ -79,9 +79,9 @@
 }
 
 .btn-store-content div:first-child {
-    font-size: 10px;
+    font-size: 0.625rem;  /* Equivalent to 10px */
     line-height: 140%;
-    margin-bottom: 2px;
+    margin-bottom: 0.125rem;  /* Equivalent to 2px */
 }
 
 .btn-store-content div:last-child {
@@ -102,15 +102,15 @@
 /* ---------button-google-play-------- */
 .button-google-play {
     box-sizing: border-box;
-    width: 200px;
-    height: 64px;
+    width: 12.5rem;  /* Equivalent to 200px */
+    height: 4rem;  /* Equivalent to 64px */
     display: inline-block;
     position: relative;
     font-size: 1rem;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 100px;
+    border-radius: 6.25rem;  /* Equivalent to 100px */
     color: var(--text-dark-color);
     overflow: hidden;
     display: flex;
@@ -119,11 +119,11 @@
     /* justify-content: center; */
     background-color: var(--body-background-color);
     border: 1px solid var(--text-dark-color);
-    padding: 12px 40px 12px 20px;
+    padding: 0.75rem 2.5rem 0.75rem 1.25rem;  /* Equivalent to 12px 40px 12px 20px */
 }
 
 .google-play-icon {
-    margin-right: 8px;
+    margin-right: 0.5rem;  /* Equivalent to 8px */
     content: url('../../assets/icons/google-play-icon-dark.svg');
     transition: content 0.1s;
 }
@@ -134,9 +134,9 @@
 }
 
 .btn-google-play-content div:first-child {
-    font-size: 10px;
+    font-size: 0.625rem;  /* Equivalent to 10px */
     line-height: 140%;
-    margin-bottom: 2px;
+    margin-bottom: 0.125rem;  /* Equivalent to 2px */
     align-self: flex-start;
 }
 
