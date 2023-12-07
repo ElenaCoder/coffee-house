@@ -155,3 +155,36 @@
 .button-google-play:hover .google-play-icon {
     content: url('../../assets/icons/google-play-icon-light.svg');
 }
+
+
+/* ----------button-icon-dark----------- */
+.arrow{
+    position: absolute;
+    top: 47%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 4px;
+}
+
+.prev img {
+    transform: rotate(180deg);
+    transform-origin: center;
+}
+
+.next {
+    right: 4px;
+}
+
+.arrow.next:hover img{
+    content: url('../../../assets/icons/arrow-next-onhover.svg');
+
+}
+
+.arrow.prev:hover img{
+    content: url('../../../assets/icons/arrow-next-onhover.svg');
+
+}
