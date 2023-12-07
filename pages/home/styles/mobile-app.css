@@ -1,25 +1,25 @@
 .mobile-app {
-    height: 630px;
-    margin-bottom: 100px;
+    height: 39.375rem; /* Equivalent to 630px */
+    margin-bottom: 6.25rem; /* Equivalent to 100px */
 }
 
 .mobile-app-container {
-    height: 630px;
+    height: 39.375rem; /* Equivalent to 630px */
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .mobile-part1 {
-    width: 630px;
-    margin-right: 100px;
+    width: 39.375rem; /* Equivalent to 630px */
+    margin-right: 6.25rem; /* Equivalent to 100px */
 }
 
 .mobile-heading {
-    font-size: 60px;
+    font-size: 3.75rem; /* Equivalent to 60px */
     line-height: 125%;
     color: var(--text-dark-color);
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* Equivalent to 40px */
 }
 
 .mobile-heading span {
@@ -31,7 +31,7 @@
     font-size: 1rem;
     font-weight: 400;
     color: var(--text-dark-color);
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem; /* Equivalent to 40px */
 }
 
 .mobile-part2 img {
@@ -41,7 +41,7 @@
 }
 
 .btn-wrapper {
-    width: 420px;
+    width: 26.25rem; /* Equivalent to 420px */
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
