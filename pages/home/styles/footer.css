@@ -8,7 +8,7 @@
     align-items: center;
     margin: auto;
     padding: 6.25rem; /* Equivalent to 100px */
-    margin-bottom: 2.5rem; /* Equivalent to 40px */
+
 }
 
 .footer-part1 {
@@ -67,4 +67,16 @@
 
 .contact-info-item img {
     margin-right: 0.25rem; /* Equivalent to 4px */
+}
+
+.media-wrapper a:hover .twitter {
+    content: url('../../../assets/icons/twitter-icon-hover.svg');
+}
+
+.media-wrapper a:hover .instagram {
+    content: url('../../../assets/icons/instagram-icon-hover.svg');
+}
+
+.media-wrapper a:hover .facebook {
+    content: url('../../../assets/icons/facebook-icon-hover.svg');
 }
