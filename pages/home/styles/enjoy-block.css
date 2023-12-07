@@ -3,6 +3,10 @@ section.enjoy-block {
     margin-bottom: 6.25rem; /* Equivalent to 100px */
 }
 
+main a{
+    text-decoration: none;
+}
+
 .enjoy-block-content {
     display: flex;
     flex-direction: column;
