@@ -61,6 +61,11 @@
     line-height: 150%;
 }
 
+.contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .contact-info-item {
     margin-bottom: 1rem; /* Equivalent to 16px */
 }
