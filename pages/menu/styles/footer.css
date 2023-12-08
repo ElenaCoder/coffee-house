@@ -1,0 +1,87 @@
+.footer-container {
+    background: var(--container-background-color);
+    border-radius: 2.5rem; /* Equivalent to 40px */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    padding: 6.25rem; /* Equivalent to 100px */
+
+}
+
+.footer-part1 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8.75rem; /* Equivalent to 140px */
+}
+
+.quote-row1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.75rem; /* Equivalent to 60px */
+    font-weight: 600;
+    line-height: 125%;
+    margin-bottom: 2.5rem; /* Equivalent to 40px */
+}
+
+.quote-part1 {
+    color: var(--text-light-color);
+}
+
+.quote-part2 {
+    color: var(--text-accent-color);
+    font-style: italic;
+}
+
+.media-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.media-wrapper a:not(:last-child) {
+    margin-right: 0.75rem; /* Equivalent to 12px */
+}
+
+.media-wrapper div {
+    height: 3.75rem; /* Equivalent to 60px */
+}
+
+.footer-part2 {
+    color: var(--text-light-color);
+}
+
+.contact-heading {
+    font-size: 1.5rem; /* Equivalent to 24px */
+    line-height: 125%;
+    margin-bottom: 40px;
+}
+
+.contact {
+    line-height: 150%;
+}
+
+.contact a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info-item {
+    margin-bottom: 1rem; /* Equivalent to 16px */
+}
+
+.contact-info-item img {
+    margin-right: 0.25rem; /* Equivalent to 4px */
+}
+
+.media-wrapper a:hover .twitter {
+    content: url('../../../assets/icons/twitter-icon-hover.svg');
+}
+
+.media-wrapper a:hover .instagram {
+    content: url('../../../assets/icons/instagram-icon-hover.svg');
+}
+
+.media-wrapper a:hover .facebook {
+    content: url('../../../assets/icons/facebook-icon-hover.svg');
+}
