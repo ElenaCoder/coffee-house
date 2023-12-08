@@ -1,11 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Menu age</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+
+        <!--Normalize-->
+        <link rel="stylesheet" href="../../assets/styles/normalize.css" />
+        <link rel="stylesheet" href="../../assets/styles/base.css" />
+
+        <!--Link to the Font Awesome icons-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <script
+            src="https://kit.fontawesome.com/e1ad46137b.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <!--Sections-->
+        <link rel="stylesheet" href="../../assets/styles/button.css" />
+        <link rel="stylesheet" href="./styles/header.css" />
+        <link rel="stylesheet" href="./styles/menu-offer.css" />
+        <link rel="stylesheet" href="./styles/footer.css" />
+
+        <!--Fonts Inter from https://fonts.google.com/specimen/Inter?query=inter-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <script src="./script.js" defer></script>
+    </head>
+    <body>
+        <div class="content">
+            <!--HEADER-->
+            <header class="header">
+                <div class="container">
+                    <div class="footer-wrapper">
+                        <div class="header-row">
+                            <a href="../home/index.html">
+                                <div class="header-logo">
+                                    <img
+                                        src="../../assets/icons/coffee-house-logo.png"
+                                        alt="Logo_coffee-house"
+                                        width="100"
+                                        height="60"
+                                    />
+                                </div>
+                            </a>
+
+                            <nav class="header-nav">
+                                <ul>
+                                    <li>
+                                        <a href="../home/index.html#favorite-coffee"
+                                            >Favorite coffee</a
+                                        >
+                                    </li>
+                                    <li><a href="../home/index.html#about">About</a></li>
+                                    <li>
+                                        <a href="../home/index.html#mobile-app">Mobile app</a>
+                                    </li>
+                                    <li><a href="#footer">Contact us</a></li>
+                                </ul>
+                            </nav>
+
+                            <a href="../menu/index.html">
+                                <div class="header-menu">
+                                    <div class="menu">Menu</div>
+                                    <img
+                                        src="../../assets/icons/coffee-cup.png"
+                                        alt="Cup Logo"
+                                        width="20"
+                                        height="20"
+                                    />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--/HEADER-->
+
+            <!--MAIN-->
+            <main>
+                <!--SECTION 1 - ENJOY_BLOCK-->
+                <section class="menu-offer">
+                    <div class="container">
+                        <div class="menu-offer-wrapper">
+                            <div class="offer">
+                                <div class="offer-heading">
+                                    Behind each of our cups hides an
+                                    <span>amazing surprise</span>
+                                </div>
+                                <div class="choice-tabs">
+                                    <div
+                                        class="choice-tab coffee active"
+                                        data-offer="coffee"
+                                    >
+                                        <img
+                                            src="../../assets/icons/tab-item-coffee-inactive.svg"
+                                            width="115"
+                                            height="46"
+                                            alt="coffee icon"
+                                        />
+                                    </div>
+                                    <div
+                                        class="choice-tab tea"
+                                        data-offer="tea"
+                                    >
+                                        <img
+                                            src="../../assets/icons/tab-item-tea-inactive.svg"
+                                            width="90"
+                                            height="46"
+                                            alt="tea icon"
+                                        />
+                                    </div>
+                                    <div
+                                        class="choice-tab dessert"
+                                        data-offer="dessert"
+                                    >
+                                        <img
+                                            src="../../assets/icons/tab-item-dessert-inactive.svg"
+                                            width="124"
+                                            height="46"
+                                            alt="dessert icon"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer-content-wrapper">
+                                <div
+                                    class="coffee-content-wrapper content-tab"
+                                    data-content="coffee"
+                                >
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-1.jpg"
+                                                alt="Irish Coffee"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Irish coffee
+                                            </h3>
+                                            <p class="card-description">
+                                                Fragrant black coffee with
+                                                Jameson Irish whiskey and
+                                                whipped milk
+                                            </p>
+                                            <p class="card-price">$7.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-2.jpg"
+                                                alt="Kahlua coffee"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Kahlua coffee
+                                            </h3>
+                                            <p class="card-description">
+                                                Classic coffee with milk and
+                                                Kahlua liqueur under a cap of
+                                                frothed milk
+                                            </p>
+                                            <p class="card-price">$7.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-3.jpg"
+                                                alt="Honey raf"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Honey raf
+                                            </h3>
+                                            <p class="card-description">
+                                                Espresso with frothed milk,
+                                                cream and aromatic honey
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-4.jpg"
+                                                alt="Ice cappuccino"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Ice cappuccino
+                                            </h3>
+                                            <p class="card-description">
+                                                Cappuccino with soft thick foam
+                                                in summer version with ice
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-5.jpg"
+                                                alt="Espresso"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">Espresso</h3>
+                                            <p class="card-description">
+                                                Classic black coffee
+                                            </p>
+                                            <p class="card-price">$4.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-6.jpg"
+                                                alt="Latte"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">Latte</h3>
+                                            <p class="card-description">
+                                                Espresso coffee with the
+                                                addition of steamed milk and
+                                                dense milk foam
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-7.jpg"
+                                                alt="Latte macchiato"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Latte macchiato
+                                            </h3>
+                                            <p class="card-description">
+                                                Espresso with frothed milk and
+                                                chocolate
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/coffee/coffee-8.jpg"
+                                                alt="Coffee with cognac"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Coffee with cognac
+                                            </h3>
+                                            <p class="card-description">
+                                                Fragrant black coffee with
+                                                cognac and whipped cream
+                                            </p>
+                                            <p class="card-price">$6.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="tea-content-wrapper content-tab none"
+                                    data-content="tea"
+                                >
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/tea/tea-1.jpg"
+                                                alt="Moroccan"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">Moroccan</h3>
+                                            <p class="card-description">
+                                                Fragrant black tea with the
+                                                addition of tangerine, cinnamon,
+                                                honey, lemon and mint
+                                            </p>
+                                            <p class="card-price">$4.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/tea/tea-2.jpg"
+                                                alt="Ginger"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">Ginger</h3>
+                                            <p class="card-description">
+                                                Original black tea with fresh
+                                                ginger, lemon and honey
+                                            </p>
+                                            <p class="card-price">$5.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/tea/tea-3.jpg"
+                                                alt="Cranberry"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Cranberry
+                                            </h3>
+                                            <p class="card-description">
+                                                Invigorating black tea with
+                                                cranberry and honey
+                                            </p>
+                                            <p class="card-price">$5.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/tea/tea-4.jpg"
+                                                alt="Sea buckthorn"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Sea buckthorn
+                                            </h3>
+                                            <p class="card-description">
+                                                Toning sweet black tea with sea
+                                                buckthorn, fresh thyme and
+                                                cinnamon
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="dessert-content-wrapper content-tab none"
+                                    data-content="dessert"
+                                >
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-1.jpg"
+                                                alt="Marble cheesecake"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Marble cheesecake
+                                            </h3>
+                                            <p class="card-description">
+                                                Philadelphia cheese with lemon
+                                                zest on a light sponge cake and
+                                                red currant jam
+                                            </p>
+                                            <p class="card-price">$3.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-2.jpg"
+                                                alt="Red velvet"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Red velvet
+                                            </h3>
+                                            <p class="card-description">
+                                                Layer cake with cream cheese
+                                                frosting
+                                            </p>
+                                            <p class="card-price">$4.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-3.jpg"
+                                                alt="Cheesecakes"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Cheesecakes
+                                            </h3>
+                                            <p class="card-description">
+                                                Soft cottage cheese pancakes
+                                                with sour cream and fresh
+                                                berries and sprinkled with
+                                                powdered sugar
+                                            </p>
+                                            <p class="card-price">$4.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-4.jpg"
+                                                alt="Creme brulee"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Creme brulee
+                                            </h3>
+                                            <p class="card-description">
+                                                Delicate creamy dessert in a
+                                                caramel basket with wild berries
+                                            </p>
+                                            <p class="card-price">$4.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-5.jpg"
+                                                alt="Pancakes"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">Pancakes</h3>
+                                            <p class="card-description">
+                                                Tender pancakes with strawberry
+                                                jam and fresh strawberries
+                                            </p>
+                                            <p class="card-price">$4.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-6.jpg"
+                                                alt="Honey cake"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Honey cake
+                                            </h3>
+                                            <p class="card-description">
+                                                Classic honey cake with delicate
+                                                custard
+                                            </p>
+                                            <p class="card-price">$4.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-7.jpg"
+                                                alt="Chocolate cake"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Chocolate cake
+                                            </h3>
+                                            <p class="card-description">
+                                                Cake with hot chocolate filling
+                                                and nuts with dried apricots
+                                            </p>
+                                            <p class="card-price">$5.50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img
+                                                src="../../assets/images/dessert/dessert-8.jpg"
+                                                alt="Black forest"
+                                            />
+                                        </div>
+                                        <div class="card-content">
+                                            <h3 class="card-title">
+                                                Black forest
+                                            </h3>
+                                            <p class="card-description">
+                                                A combination of thin sponge
+                                                cake with cherry jam and light
+                                                chocolate mousse
+                                            </p>
+                                            <p class="card-price">$6.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/SECTION 4 - MOBILE_APP-->
+            </main>
+            <!--/MAIN-->
+
+            <!--FOOTER-->
+            <footer id="footer">
+                <div class="container">
+                    <div class="footer-container">
+                        <div class="footer-part1">
+                            <div class="quote-row1">
+                                <span class="quote-part1"
+                                    >Sip, Savor, Smile. </span
+                                ><span class="quote-part2"
+                                    >It’s coffee time!</span
+                                >
+                            </div>
+                            <div class="media-wrapper">
+                                <a href="https://www.twitter.com/">
+                                    <div class="twitter">
+                                        <img
+                                            src="../../assets/icons/twitter-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="twitter icon"
+                                        />
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <div class="instagram">
+                                        <img
+                                            src="../../assets/icons/instagram-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="instagram icon"
+                                        />
+                                    </div>
+                                </a>
+                                <a href="https://www.facebook.com/">
+                                    <div class="facebook">
+                                        <img
+                                            src="../../assets/icons/facebook-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="facebook icon"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-part2">
+                            <div class="contact-heading">Contact us</div>
+                            <div class="contact contact-info">
+                                <div class="contact-info-item">
+                                    <a
+                                        href="https://www.google.com/maps/place/8558+Green+Rd.,+LA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="../../assets/icons/location-icon.svg"
+                                            alt="Location Icon"
+                                        />
+                                        <span>8558 Green Rd., LA</span>
+                                    </a>
+                                </div>
+                                <a href="tel:+1(603)555-0123">
+                                    <div class="contact-info-item">
+                                        <img
+                                            src="../../assets/icons/phone-icon.svg"
+                                            alt="Phone Icon"
+                                        />
+                                        <span>+1 (603) 555-0123</span>
+                                    </div>
+                                </a>
+                                <div class="contact-info-item">
+                                    <img
+                                        src="../../assets/icons/clock-icon.svg"
+                                        alt="Clock Icon"
+                                    />
+                                    <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /FOOTER-->
+        </div>
+    </body>
 </html>
