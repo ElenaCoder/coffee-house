@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.header-row a{
+    text-decoration: none;
+}
+
 .header-logo {
     display: flex;
 }
