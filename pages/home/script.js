@@ -68,3 +68,48 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 // -------//FAVORITE_COFFEE SECTION 3------------
+
+// -------//SELF ASSESSMENT------------
+
+console.groupCollapsed('%c Checking validation of pages: +16 ', 'color:MediumSeaGreen; font-weight: 900;');
+console.log('Checking validation of pages ... +12');
+console.log('Favicon is added to each page ... +4');
+console.groupEnd();
+
+console.groupCollapsed('%c The layout matches the design +42', 'color:MediumSeaGreen; font-weight: 900;');
+console.log('<header> block on each page ... +6');
+console.log('Enjoy block on home page ... +6');
+console.log('Favorites Coffee block on home page ... +6');
+console.log('About block on home page ... +6');
+console.log('Mobile App block on home page ... +6');
+console.log('Menu block on menu page ... +6');
+console.log('<footer> block on each page ... +6');
+console.groupEnd();
+
+console.groupCollapsed('%c CSS Requirements +10 ', 'color:MediumSeaGreen; font-weight: 900;');
+console.log('For positioning images in About block on home page and products in Menu block on menu page used Flexbox or Grid Layout... +4');
+console.log('When scaling the browser page (<100%) or increasing the page width (>1440px), the layout of both pages is centered rather than shifted to the side and not stretched across the entire width ... +4');
+console.log('The background color Body stretches across the entire width of the page ... +2');
+
+console.groupEnd();
+
+console.groupCollapsed('%c Interactivity +32 ', 'color:MediumSeaGreen; font-weight: 900;;');
+console.log('Navigation elements (except Contacts) lead to corresponding blocks on home page (anchor links) ... +4');
+console.log('Contacts in navigation panel links to the <footer> block on its own page (anchor link) ... +2');
+console.log('Smooth scrolling with anchor links ... +2');
+console.log('When clicking on the Menu buttons in header and Enjoy block on home page, it navigates to the menu page ... +2');
+console.log('The Menu button in header on menu page is non-interactive ... +2');
+console.log('When clicking on the Logo in header, it navigates to the home page ... +2');
+console.log('The active Coffee button in Menu block of Menu page is non-interactive ... +2');
+console.log('Each Coffee-card in the Menu section of the Menu page is interactive when hovering over any area of the card ... +4');
+console.log('In the <footer> block, clicking on the link with phone number (all area including icon) should initiate a phone call ... +2');
+console.log('In the <footer> block, clicking on the link with the address (all area including icon) should open a new browser tab with Google Maps displaying any location of your choice ... +2');
+console.log("Interactivity of links and buttons is implemented according to Figma layout. Interactivity includes not only changing cursor's appearance, for example, using the cursor: pointer property, but also the use of other visual effects, such as changing the background color or font color, following the Styleguide in Figma layout ... +4");
+console.log('Mandatory requirement for interactivity: smooth change in the appearance of an element on hover and click, without affecting adjacent elements ... +4');
+console.groupEnd();
+
+// Add more groups for other criteria...
+
+// Calculate total points
+const totalPoints = (12 + 4) + (6 + 6 + 6 + 6 + 6 + 6 + 6) + (4 + 4 + 2) + (4 + 2 + 2 + 2 + 2 + 2 + 2 + 4 + 2 + 2 + 4 + 4);
+console.log(`Total Points: ${totalPoints}`);
