@@ -61,6 +61,11 @@
     line-height: 150%;
 }
 
+.contact .contact-info-item:first-child,
+.contact .a:first-child{
+    width: 70%;
+}
+
 .contact a {
     text-decoration: none;
     color: inherit;
@@ -84,4 +89,25 @@
 
 .media-wrapper a:hover .facebook {
     content: url('../../../assets/icons/facebook-icon-hover.svg');
+}
+
+.contact-info-item {
+    position: relative;
+    text-decoration: none;
+}
+
+.contact-info-item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -0.3125rem; /* Equivalent to 5px */
+    height: 0.125rem; /* Equivalent to 2px */
+    background-color: var(--text-light-color);
+    transition: left 0.35s ease, right 0.35s ease;
+}
+
+.contact-info-item:hover::after {
+    left: 0;
+    right: 0;
 }
