@@ -61,7 +61,7 @@
 .coffee-content-wrapper.none,
 .tea-content-wrapper.none,
 .dessert-content-wrapper.none {
-  display: none;
+    display: none;
 }
 
 .coffee-content-wrapper,
@@ -73,37 +73,254 @@
 }
 
 .card {
-    border: 1px solid var(--border-light-color);
-    border-radius: 40px;
-    overflow: hidden;
-    max-width: 310px;
-    width: 100%;
+    display: flex;
     height: 506px;
-    box-sizing: border-box;
+    max-width: 310px;
+    flex-direction: column;
+    /* align-items: center; */
+    border-radius: 40px;
+    border: 1px solid var(--border-light-color);
 }
 
-.img-wrapper {
-    width: 100%;
+/* COFFEE */
+.card .coffee-box-1 {
+    width: 310px;
     height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-1.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-2 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-2.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-3 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-3.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-4 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-4.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-5 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-5.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-6 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-6.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-7 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/coffee/coffee-7.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-8 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: url(../../../assets/images/coffee/coffee-8.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .coffee-box-1,
+.card .coffee-box-2,
+.card .coffee-box-3,
+.card .coffee-box-4,
+.card .coffee-box-5,
+.card .coffee-box-6,
+.card .coffee-box-7,
+.card .coffee-box-8 {
+    border-radius: 40px;
+    position: relative;
     overflow: hidden;
-    border-radius: 40px;
+    background-size: 100%;
+    transition: background-size 0.9s ease;
 }
 
-.img-wrapper img {
-    width: 100%;
-    height: auto;
-    border-radius: 40px;
-    /* height: 100%; */
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+.card .coffee-box-1:hover,
+.card .coffee-box-2:hover,
+.card .coffee-box-3:hover,
+.card .coffee-box-4:hover,
+.card .coffee-box-5:hover,
+.card .coffee-box-6:hover,
+.card .coffee-box-7:hover,
+.card .coffee-box-8:hover {
+    background-size: 110%;
+}
+/* COFFEE */
+
+/* TEA */
+.card .tea-box-1 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/tea/tea-1.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
 }
 
-.card:hover img {
-    transform: scale(1.05);
+.card .tea-box-2 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/tea/tea-2.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
 }
+
+.card .tea-box-3 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/tea/tea-3.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .tea-box-4 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/tea/tea-4.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .tea-box-1,
+.card .tea-box-2,
+.card .tea-box-3,
+.card .tea-box-4 {
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    background-size: 100%;
+    transition: background-size 0.9s ease;
+}
+
+.card .tea-box-1:hover,
+.card .tea-box-2:hover,
+.card .tea-box-3:hover,
+.card .tea-box-4:hover {
+    background-size: 110%;
+}
+/* /TEA */
+
+/* DESSERT */
+.card .dessert-box-1 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-1.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-2 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-2.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-3 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-3.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-4 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-4.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-5 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-5.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-6 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-6.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-7 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    background: url(../../../assets/images/dessert/dessert-7.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-8 {
+    width: 310px;
+    height: 310px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: url(../../../assets/images/dessert/dessert-8.jpg)
+        var(--border-light-color) 50% / cover no-repeat;
+}
+
+.card .dessert-box-1,
+.card .dessert-box-2,
+.card .dessert-box-3,
+.card .dessert-box-4,
+.card .dessert-box-5,
+.card .dessert-box-6,
+.card .dessert-box-7,
+.card .dessert-box-8 {
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    background-size: 100%;
+    transition: background-size 0.9s ease;
+}
+
+.card .dessert-box-1:hover,
+.card .dessert-box-2:hover,
+.card .dessert-box-3:hover,
+.card .dessert-box-4:hover,
+.card .dessert-box-5:hover,
+.card .dessert-box-6:hover,
+.card .dessert-box-7:hover,
+.card .dessert-box-8:hover {
+    background-size: 110%;
+}
+/* /DESSERT */
 
 .card-content {
-    box-sizing: border-box;
     height: 196px;
     padding: 20px;
     display: flex;
@@ -116,7 +333,7 @@
     font-size: 24px;
     line-height: 125%;
     /* margin-bottom: 12px; */
-height: 30px;
+    height: 30px;
 }
 
 .card-description {
@@ -124,7 +341,7 @@ height: 30px;
     font-size: 1rem;
     font-weight: 400;
     /* margin-bottom: 12px; */
-height: 72px;
+    height: 72px;
 }
 
 .card-price {
