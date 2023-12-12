@@ -15,9 +15,12 @@
     --border-dark-color: #665f55;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 body {
