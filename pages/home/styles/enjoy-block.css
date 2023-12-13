@@ -1,9 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 .enjoy-block {
     height: 40.25rem; /* Equivalent to 644px */
     margin-bottom: 6.25rem; /* Equivalent to 100px */
 }
 
-main a{
+main a {
     text-decoration: none;
 }
 
@@ -39,4 +42,42 @@ main a{
     margin: 0;
     margin-bottom: 2.5rem; /* Equivalent to 40px */
     color: var(--text-light-color);
+}
+
+/* Media query for screens between 768px and 1439px (tablets) */
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .enjoy-block-content {
+        padding: 6.25rem 6.125rem 6.25rem 3.75rem; /* Equivalent to 100px 98px 100px 60px */
+    }
+}
+
+/* Media query for screens between 380px and 767px (smaller tablets and large mobiles) */
+@media screen and (max-width: 767px) and (min-width: 380px) {
+    .enjoy-block {
+        height: 34.5rem; /* Equivalent to 552px */
+    }
+
+    .enjoy-block-content {
+        padding: 3.75rem 1rem; /* Equivalent to 60px 16px 60px 16px */
+    }
+
+    .enjoy-block-heading {
+        font-size: 2.625rem; /* Equivalent to 42px */
+        line-height: 115%;
+    }
+}
+
+/* Media query for screens below 380px (small mobiles) */
+@media screen and (max-width: 379px) {
+    .enjoy-block-content {
+        padding: 3.75rem 1rem; /* Equivalent to 60px 16px 60px 16px */
+    }
+
+    .enjoy-block-heading {
+        font-size: 2.625rem; /* Equivalent to 42px */
+    }
+    .enjoy-block-content p {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
 }
