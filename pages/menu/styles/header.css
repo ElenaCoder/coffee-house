@@ -96,7 +96,7 @@ a .header-menu::after {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3.75rem; /* Equivalent to 60px */
+        top: 4.75rem; /* Equivalent to 60px */
         left: 26%;
         /* max-width: 688px; */
         height: 1004px;
@@ -186,7 +186,7 @@ a .header-menu::after {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 3.75rem; /* Equivalent to 60px */
+        top: 4.75rem; /* Equivalent to 60px */
         left: 36%;
         width: 23.75rem; /* Equivalent to 380px */
         height: 50.25rem; /* Equivalent to 804px */
