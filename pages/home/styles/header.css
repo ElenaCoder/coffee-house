@@ -256,8 +256,7 @@ a .header-menu:hover::after {
 
 /* Media query for screens below 380px (small mobiles) */
 @media screen and (max-width: 379px) {
-    body {
-        zoom: 0.5;
+    header {
         font-size: 0.5rem;
     }
 }
