@@ -65,3 +65,34 @@ body {
     margin-right: auto;
     /* border: 1px solid black; */
 }
+
+
+/* Media query for screens between 768px and 1439px (tablets) */
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .content {
+        max-width: 768px;
+    }
+    .container {
+        max-width: 688px;
+    }
+}
+
+/* Media query for screens between 380px and 767px (smaller tablets and large mobiles) */
+@media screen and (max-width: 767px) and (min-width: 380px) {
+    .content {
+        max-width: 480px;
+    }
+    .container {
+        max-width: 348px;
+    }
+}
+
+/* Media query for screens below 380px (small mobiles) */
+@media screen and (max-width: 379px) {
+    .content {
+        max-width: 80%;
+    }
+    .container {
+        max-width: 80%;
+    }
+}
