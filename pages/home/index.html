@@ -14,7 +14,10 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <script src="https://kit.fontawesome.com/e1ad46137b.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/e1ad46137b.js"
+            crossorigin="anonymous"
+        ></script>
 
         <!--Sections-->
         <link rel="stylesheet" href="../../assets/styles/button.css" />
@@ -33,7 +36,11 @@
             rel="stylesheet"
         />
 
-        <link rel="icon" href="../../assets/images/favicon/favicon.ico" type="image/x-icon" />
+        <link
+            rel="icon"
+            href="../../assets/images/favicon/favicon.ico"
+            type="image/x-icon"
+        />
         <script src="./script.js" defer></script>
     </head>
     <body>
@@ -41,7 +48,7 @@
             <!--HEADER-->
             <header class="header">
                 <div class="container">
-                    <div class="footer-wrapper">
+                    <div class="header-wrapper">
                         <div class="header-row">
                             <a href="../home/index.html">
                                 <div class="header-logo">
@@ -56,14 +63,55 @@
 
                             <nav class="header-nav">
                                 <ul>
-                                    <li><a href="#favorite-coffee">Favorite coffee</a></li>
+                                    <li>
+                                        <a href="#favorite-coffee"
+                                            >Favorite coffee</a
+                                        >
+                                    </li>
                                     <li><a href="#about">About</a></li>
-                                    <li><a href="#mobile-app">Mobile app</a></li>
+                                    <li>
+                                        <a href="#mobile-app">Mobile app</a>
+                                    </li>
                                     <li><a href="#footer">Contact us</a></li>
                                 </ul>
                             </nav>
 
-                            <a href="../menu/index.html">
+                            <div class="burger-menu">
+                                <div class="burger-icon">&#9776;</div>
+                                <div class="overlay"></div>
+                                <nav class="burger-nav">
+                                    <ul>
+                                        <li>
+                                            <a href="#favorite-coffee"
+                                                >Favorite coffee</a
+                                            >
+                                        </li>
+                                        <li><a href="#about">About</a></li>
+                                        <li>
+                                            <a href="#mobile-app">Mobile app</a>
+                                        </li>
+                                        <li>
+                                            <a href="#footer">Contact us</a>
+                                        </li>
+                                        <li>
+                                            <a href="../menu/index.html">
+                                                <div class="header-menu-burger">
+                                                    <div class="menu">Menu</div>
+                                                    <img
+                                                        src="../../assets/icons/coffee-cup.png"
+                                                        alt="Cup Logo"
+                                                        width="40"
+                                                        height="40"
+                                                    />
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+                            <a href="../menu/index.html" class="menu-link">
                                 <div class="header-menu">
                                     <div class="menu">Menu</div>
                                     <img
@@ -84,37 +132,43 @@
             <main>
                 <!--SECTION 1 - ENJOY_BLOCK-->
                 <a href="../menu/index.html">
-                    <div  id="enjoy-block" class="enjoy-block ">
-
-                            <div class="container">
-                                <div class="enjoy-block-content">
-                                    <div class="enjoy-block-heading">
-                                        <span class="enjoy-heading-part1">Enjoy </span>
-                                        <span class="enjoy-heading-part2">premium coffee at our charming cafe</span>
-                                    </div>
-                                    <p>With its inviting atmosphere and delicious coffee options,
-                                        the Coffee House Resource is a popular destination for coffee lovers
-                                        and those seeking a warm and inviting space to enjoy their favorite beverage.
-                                    </p>
-                                    <div class="button-primary">
-                                        <div class="btn-content">Menu</div>
-                                            <img
-                                                src="../../assets/icons/coffee-cup.png"
-                                                class="cup-icon"
-                                                alt="Cup Logo"
-                                                width="20"
-                                                height="20"
-                                            />
-                                    </div>
+                    <div id="enjoy-block" class="enjoy-block none">
+                        <div class="container">
+                            <div class="enjoy-block-content">
+                                <div class="enjoy-block-heading">
+                                    <span class="enjoy-heading-part1"
+                                        >Enjoy
+                                    </span>
+                                    <span class="enjoy-heading-part2"
+                                        >premium coffee at our charming
+                                        cafe</span
+                                    >
+                                </div>
+                                <p>
+                                    With its inviting atmosphere and delicious
+                                    coffee options, the Coffee House Resource is
+                                    a popular destination for coffee lovers and
+                                    those seeking a warm and inviting space to
+                                    enjoy their favorite beverage.
+                                </p>
+                                <div class="button-primary">
+                                    <div class="btn-content">Menu</div>
+                                    <img
+                                        src="../../assets/icons/coffee-cup.png"
+                                        class="cup-icon"
+                                        alt="Cup Logo"
+                                        width="20"
+                                        height="20"
+                                    />
                                 </div>
                             </div>
-
+                        </div>
                     </div>
                 </a>
                 <!--/SECTION 1 - ENJOY_BLOCK-->
 
                 <!--SECTION 2 - FAVORITE_COFFEE-->
-                <section id="favorite-coffee" class="favorite-coffee">
+                <section id="favorite-coffee" class="favorite-coffee none">
                     <div class="container">
                         <div class="favorite-coffee-content">
                             <div class="coffee-heading">
@@ -123,40 +177,72 @@
                             <div class="slider-container">
                                 <div class="slider">
                                     <div class="card">
-                                        <img src="../../assets/images/coffee-slider-1.png" alt="S’mores Frappuccino">
+                                        <img
+                                            src="../../assets/images/coffee-slider-1.png"
+                                            alt="S’mores Frappuccino"
+                                        />
                                         <div class="card-text">
                                             <h3>S’mores Frappuccino</h3>
-                                            <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                            <p>
+                                                This new drink takes an espresso
+                                                and mixes it with brown sugar
+                                                and cinnamon before being topped
+                                                with oat milk.
+                                            </p>
                                             <p>$5.50</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <img src="../../assets/images/coffee-slider-2.png" alt="Caramel Macchiato">
+                                        <img
+                                            src="../../assets/images/coffee-slider-2.png"
+                                            alt="Caramel Macchiato"
+                                        />
                                         <div class="card-text">
                                             <h3>Caramel Macchiato</h3>
-                                            <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                            <p>
+                                                Fragrant and unique classic
+                                                espresso with rich
+                                                caramel-peanut syrup, with cream
+                                                under whipped thick foam.
+                                            </p>
                                             <p>$5.00</p>
                                         </div>
                                     </div>
                                     <div class="card">
-                                        <img src="../../assets/images/coffee-slider-3.png" alt="Ice Coffee">
+                                        <img
+                                            src="../../assets/images/coffee-slider-3.png"
+                                            alt="Ice Coffee"
+                                        />
                                         <div class="card-text">
                                             <h3>Ice Coffee</h3>
-                                            <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                            <p>
+                                                A popular summer drink that
+                                                tones and invigorates. Prepared
+                                                from coffee, milk and ice.
+                                            </p>
                                             <p>$4.50</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="arrow next">
-                                    <img src="../../assets/icons/arrow-next-default.svg" alt="Next arrow icon">
+                                    <img
+                                        src="../../assets/icons/arrow-next-default.svg"
+                                        alt="Next arrow icon"
+                                    />
                                 </div>
 
-                                  <div class="arrow prev">
-                                    <img src="../../assets/icons/arrow-next-default.svg" alt="Previous arrow icon">
-                                  </div>
-                                  <div class="controls">
-                                    <div class="control darker" data-index="0"></div>
+                                <div class="arrow prev">
+                                    <img
+                                        src="../../assets/icons/arrow-next-default.svg"
+                                        alt="Previous arrow icon"
+                                    />
+                                </div>
+                                <div class="controls">
+                                    <div
+                                        class="control darker"
+                                        data-index="0"
+                                    ></div>
                                     <div class="control" data-index="1"></div>
                                     <div class="control" data-index="2"></div>
                                 </div>
@@ -167,12 +253,14 @@
                 <!--SECTION 2 - /FAVORITE_COFFEE-->
 
                 <!--SECTION 3 - ABOUT-->
-                <div id="about" class="about">
+                <div id="about" class="about none">
                     <div class="container">
                         <div class="about-container">
-                            <div class="about-description">Resource is <span>the perfect and cozy place</span> where
-                                you can enjoy a variety of hot beverages, relax, catch up with friends,
-                                or get some work done.
+                            <div class="about-description">
+                                Resource is
+                                <span>the perfect and cozy place</span> where
+                                you can enjoy a variety of hot beverages, relax,
+                                catch up with friends, or get some work done.
                             </div>
                             <div class="image-gallery">
                                 <div class="column-1">
@@ -181,8 +269,8 @@
                                 </div>
                                 <div class="column-2">
                                     <div class="box-3"></div>
-                                    <div class="box-4 "></div>
-                            </div>
+                                    <div class="box-4"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,53 +278,55 @@
                 <!--SECTION 3 - /ABOUT-->
 
                 <!--SECTION 4 - MOBILE_APP-->
-                <div id="mobile-app" class="mobile-app">
+                <div id="mobile-app" class="mobile-app none">
                     <div class="container">
                         <div class="mobile-app-container">
                             <div class="mobile-part1">
                                 <div class="mobile-heading">
-                                    <span>Download </span>our apps to start ordering
+                                    <span>Download </span>our apps to start
+                                    ordering
                                 </div>
-                                <div class="mobile-description">Download the Resource app today and
-                                    experience the comfort of ordering your favorite
-                                    coffee from wherever you are
+                                <div class="mobile-description">
+                                    Download the Resource app today and
+                                    experience the comfort of ordering your
+                                    favorite coffee from wherever you are
                                 </div>
                                 <div class="btn-wrapper">
                                     <div class="button-app-store">
-                                            <img
-                                                src="../../assets/icons/apple-icon-dark.svg"
-                                                class="apple-icon"
-                                                alt="Apple Logo"
-                                                width="36"
-                                                height="36"
-                                            />
-                                            <div class="btn-store-content">
-                                                <div>Available on the</div>
-                                                <div>App Store</div>
-                                            </div>
+                                        <img
+                                            src="../../assets/icons/apple-icon-dark.svg"
+                                            class="apple-icon"
+                                            alt="Apple Logo"
+                                            width="36"
+                                            height="36"
+                                        />
+                                        <div class="btn-store-content">
+                                            <div>Available on the</div>
+                                            <div>App Store</div>
+                                        </div>
                                     </div>
                                     <div class="button-google-play">
-                                            <img
-                                                src="../../assets/icons/google-play-icon-dark.svg"
-                                                class="google-play-icon"
-                                                alt="Google-play Logo"
-                                                width="36"
-                                                height="36"
-                                            />
-                                            <div class="btn-google-play-content">
-                                                <div>Available on</div>
-                                                <div>Google Play</div>
-                                            </div>
+                                        <img
+                                            src="../../assets/icons/google-play-icon-dark.svg"
+                                            class="google-play-icon"
+                                            alt="Google-play Logo"
+                                            width="36"
+                                            height="36"
+                                        />
+                                        <div class="btn-google-play-content">
+                                            <div>Available on</div>
+                                            <div>Google Play</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="mobile-part2">
                                 <img
-                                src="../../assets/images/mobile-screens.svg"
-                                alt="Image 3"
-                                width="630"
-                                height="630"
-                            />
+                                    src="../../assets/images/mobile-screens.svg"
+                                    alt="Image 3"
+                                    width="630"
+                                    height="630"
+                                />
                             </div>
                         </div>
                     </div>
@@ -247,70 +337,84 @@
 
             <!--FOOTER-->
             <footer id="footer">
-                <div class="container ">
-                    <div class="footer-container">
-
-                    <div class="footer-part1">
-                        <div class="quote-row1">
-                            <span class="quote-part1">Sip, Savor, Smile. </span
-                            ><span class="quote-part2">It’s coffee time!</span>
-                        </div>
-                        <div class="media-wrapper">
-                            <a href="https://www.twitter.com/">
-                                <div class="twitter">
-                                    <img
-                                        src="../../assets/icons/twitter-icon-default.svg"
-                                        width="60"
-                                        height="60"
-                                        alt="twitter icon"
-                                    />
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <div class="instagram">
-                                    <img
-                                        src="../../assets/icons/instagram-icon-default.svg"
-                                        width="60"
-                                        height="60"
-                                        alt="instagram icon"
-                                    />
-                                </div>
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <div class="facebook">
-                                    <img
-                                        src="../../assets/icons/facebook-icon-default.svg"
-                                        width="60"
-                                        height="60"
-                                        alt="facebook icon"
-                                    />
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer-part2">
-                        <div class="contact-heading">Contact us</div>
-                        <div class="contact contact-info">
-                            <div class="contact-info-item">
-                                <a href="https://www.google.com/maps/place/8558+Green+Rd.,+LA" target="_blank" rel="noopener noreferrer">
-                                    <img src="../../assets/icons/location-icon.svg" alt="Location Icon">
-                                    <span>8558 Green Rd., LA</span>
+                <div class="container">
+                    <div class="footer-container none">
+                        <div class="footer-part1">
+                            <div class="quote-row1">
+                                <span class="quote-part1"
+                                    >Sip, Savor, Smile. </span
+                                ><span class="quote-part2"
+                                    >It’s coffee time!</span
+                                >
+                            </div>
+                            <div class="media-wrapper">
+                                <a href="https://www.twitter.com/">
+                                    <div class="twitter">
+                                        <img
+                                            src="../../assets/icons/twitter-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="twitter icon"
+                                        />
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <div class="instagram">
+                                        <img
+                                            src="../../assets/icons/instagram-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="instagram icon"
+                                        />
+                                    </div>
+                                </a>
+                                <a href="https://www.facebook.com/">
+                                    <div class="facebook">
+                                        <img
+                                            src="../../assets/icons/facebook-icon-default.svg"
+                                            width="60"
+                                            height="60"
+                                            alt="facebook icon"
+                                        />
+                                    </div>
                                 </a>
                             </div>
-                            <a href="tel:+1(603)555-0123">
-                                <div class="contact-info-item">
-                                    <img src="../../assets/icons/phone-icon.svg" alt="Phone Icon">
-                                    <span>+1 (603) 555-0123</span>
-                                  </div>
-                            </a>
-                            <div class="contact-info-item">
-                              <img src="../../assets/icons/clock-icon.svg" alt="Clock Icon">
-                              <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
-                            </div>
-                          </div>
-                    </div>
+                        </div>
 
+                        <div class="footer-part2">
+                            <div class="contact-heading">Contact us</div>
+                            <div class="contact contact-info">
+                                <div class="contact-info-item">
+                                    <a
+                                        href="https://www.google.com/maps/place/8558+Green+Rd.,+LA"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="../../assets/icons/location-icon.svg"
+                                            alt="Location Icon"
+                                        />
+                                        <span>8558 Green Rd., LA</span>
+                                    </a>
+                                </div>
+                                <a href="tel:+1(603)555-0123">
+                                    <div class="contact-info-item">
+                                        <img
+                                            src="../../assets/icons/phone-icon.svg"
+                                            alt="Phone Icon"
+                                        />
+                                        <span>+1 (603) 555-0123</span>
+                                    </div>
+                                </a>
+                                <div class="contact-info-item">
+                                    <img
+                                        src="../../assets/icons/clock-icon.svg"
+                                        alt="Clock Icon"
+                                    />
+                                    <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </footer>
