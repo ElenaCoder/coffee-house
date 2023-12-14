@@ -40,9 +40,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 /* Hamburger menu handling in HEADER section**/
 let divHamburgerMenu = document.querySelector('.burger-menu');
-let burgerNav = document.querySelector(".burger-nav");
-let divOverlay = document.querySelector('.overlay');
 let burgerIconElement = document.querySelector('.burger-icon');
+let divOverlay = document.querySelector('.overlay');
+let burgerNav = document.querySelector('.burger-nav');
 let burgerIcon = '&#9776;';
 let closeIcon = '&times;';
 
@@ -50,21 +50,21 @@ divHamburgerMenu.addEventListener('click', hamburgerMenuHandler);
 divOverlay.addEventListener('click', hamburgerMenuHandler);
 
 function hamburgerMenuHandler(e) {
-    let divHamburgerNav = document.querySelector('nav.burger-nav');
+    let contentElement = document.querySelector('.content');
+    let contentElementWidth = parseInt(window.getComputedStyle(contentElement).width);
 
-    let contentElementWidth = parseInt(window.getComputedStyle(document.querySelector('.content')).width);
-    let viewportWidth = window.innerWidth;
+    let viewportWidth = window.visualViewport.width;
     let burgerNavWidth = burgerNav.offsetWidth;
-    let leftPosition = (viewportWidth - burgerNavWidth  - contentElementWidth) / 2 ;
+    let leftPosition = (viewportWidth - burgerNavWidth - contentElementWidth) / 2 ;
 
-    if (divHamburgerNav.style.display === 'block') {
-        divHamburgerNav.style.display = 'none';
+    if (burgerNav.style.display === 'block') {
+        burgerNav.style.display = 'none';
         divOverlay.classList.remove('active');
 
         burgerIconElement.innerHTML = burgerIcon;
         burgerIconElement.style.padding = '5px 9px';
     } else {
-        divHamburgerNav.style.display = 'block';
+        burgerNav.style.display = 'block';
         divOverlay.classList.add('active');
         burgerIconElement.innerHTML = closeIcon;
         burgerIconElement.style.padding = '4px 11px';
