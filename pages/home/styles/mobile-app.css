@@ -45,3 +45,120 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* Media query for screens between 768px and 1439px (tablets) */
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .mobile-app {
+        height: 67rem; /* Equivalent to 1072px */
+    }
+    .mobile-app-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .mobile-part1 {
+        width: 43rem; /* Equivalent to 688px */
+        margin-right: 0; /* Equivalent to 100px */
+        margin-bottom: 100px;
+    }
+
+    .mobile-part2 {
+        width: 39.375rem;
+    }
+
+    .mobile-part2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Media query for screens between 380px and 767px (smaller tablets and large mobiles) */
+@media screen and (max-width: 767px) and (min-width: 380px) {
+    .mobile-app {
+        height: 48rem; /* Equivalent to 768px */
+    }
+
+    .mobile-app-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .mobile-part1 {
+        width: 21.75rem; /* Equivalent to 348px */
+        margin-right: 0;
+        margin-bottom: 2.5rem; /* Equivalent to 40px */
+    }
+
+    .mobile-heading {
+        font-size: 2rem; /* Equivalent to 32px */
+        line-height: 125%;
+    }
+
+    .btn-wrapper {
+        width: 21.75px; /* Equivalent to 348px */
+        flex-direction: column;
+    }
+
+    .button-app-store {
+        margin-bottom: 1.25rem; /* Equivalent to 20px */
+    }
+
+    .mobile-part2 {
+        width: 21.75rem; /* Equivalent to 348px */
+    }
+
+    .mobile-part2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Media query for screens below 380px (small mobiles) */
+@media screen and (max-width: 379px) {
+    .mobile-app {
+        height: 48rem; /* Equivalent to 768px */
+    }
+
+    .mobile-app-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .mobile-part1 {
+        width: 21.75rem; /* Equivalent to 348px */
+        margin-right: 0;
+        margin-bottom: 2.5rem; /* Equivalent to 40px */
+    }
+
+    .mobile-heading {
+        font-size: 2rem; /* Equivalent to 32px */
+        line-height: 125%;
+    }
+
+    .btn-wrapper {
+        flex-direction: column;
+    }
+
+    .button-app-store {
+        margin-bottom: 1.25rem; /* Equivalent to 20px */
+    }
+
+    .mobile-part2 {
+        width: 21.75rem; /* Equivalent to 348px */
+    }
+
+    .mobile-part2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
