@@ -81,7 +81,7 @@ body {
 /* Media query for screens between 380px and 767px (smaller tablets and large mobiles) */
 @media screen and (max-width: 767px) and (min-width: 380px) {
     .content {
-        max-width: 480px;
+        max-width: 380px;
     }
     .container {
         max-width: 348px;
