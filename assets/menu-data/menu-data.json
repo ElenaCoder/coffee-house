@@ -1,0 +1,148 @@
+{
+    "coffee": [
+        {
+            "title": "Irish coffee",
+            "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
+            "price": "$7.00",
+            "imageContainerClass": "coffee-box-1",
+            "image": "../../../assets/images/coffee/coffee-1.jpg"
+        },
+        {
+            "title": "Kahlua coffee",
+            "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
+            "price": "$7.00",
+            "imageContainerClass": "coffee-box-2",
+            "image": "../../../assets/images/coffee/coffee-2.jpg"
+        },
+        {
+            "title": "Honey raf",
+            "description": "Espresso with frothed milk, cream and aromatic honey",
+            "price": "$5.50",
+            "imageContainerClass": "coffee-box-3",
+            "image": "../../../assets/images/coffee/coffee-3.jpg"
+        },
+        {
+            "title": "Ice cappuccino",
+            "description": "Cappuccino with soft thick foam in summer version with ice",
+            "price": "$5.50",
+            "imageContainerClass": "coffee-box-4",
+            "image": "../../../assets/images/coffee/coffee-4.jpg"
+        },
+        {
+            "title": "Espresso",
+            "description": "Classic black coffee",
+            "price": "$4.50",
+            "imageContainerClass": "coffee-box-5",
+            "image": "../../../assets/images/coffee/coffee-5.jpg"
+        },
+        {
+            "title": "Latte",
+            "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
+            "price": "$5.50",
+            "imageContainerClass": "coffee-box-6",
+            "image": "../../../assets/images/coffee/coffee-6.jpg"
+        },
+        {
+            "title": "Latte macchiato",
+            "description": "Espresso with frothed milk and chocolate",
+            "price": "$5.50",
+            "imageContainerClass": "coffee-box-7",
+            "image": "../../../assets/images/coffee/coffee-7.jpg"
+        },
+        {
+            "title": "Coffee with cognac",
+            "description": "Fragrant black coffee with cognac and whipped cream",
+            "price": "$6.50",
+            "imageContainerClass": "coffee-box-8",
+            "image": "../../../assets/images/coffee/coffee-8.jpg"
+        }
+    ],
+    "tea": [
+        {
+            "title": "Moroccan",
+            "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
+            "price": "$4.50",
+            "imageContainerClass": "tea-box-1",
+            "image": "../../../assets/images/tea/tea-1.jpg"
+        },
+        {
+            "title": "Ginger",
+            "description": "Original black tea with fresh ginger, lemon and honey",
+            "price": "$5.00",
+            "imageContainerClass": "tea-box-2",
+            "image": "../../../assets/images/tea/tea-2.jpg"
+        },
+        {
+            "title": "Cranberry",
+            "description": "Invigorating black tea with cranberry and honey",
+            "price": "$5.00",
+            "imageContainerClass": "tea-box-3",
+            "image": "../../../assets/images/tea/tea-3.jpg"
+        },
+        {
+            "title": "Sea buckthorn",
+            "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
+            "price": "$5.50",
+            "imageContainerClass": "tea-box-4",
+            "image": "../../../assets/images/tea/tea-4.jpg"
+        }
+    ],
+    "dessert": [
+        {
+            "title": "Marble cheesecake",
+            "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
+            "price": "$3.50",
+            "imageContainerClass": "dessert-box-1",
+            "image": "../../../assets/images/dessert/dessert-1.jpg"
+        },
+        {
+            "title": "Red velvet",
+            "description": "Layer cake with cream cheese frosting",
+            "price": "$4.00",
+            "imageContainerClass": "dessert-box-2",
+            "image": "../../../assets/images/dessert/dessert-2.jpg"
+        },
+        {
+            "title": "Cheesecakes",
+            "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
+            "price": "$4.50",
+            "imageContainerClass": "dessert-box-3",
+            "image": "../../../assets/images/dessert/dessert-3.jpg"
+        },
+        {
+            "title": "Creme brulee",
+            "description": "Delicate creamy dessert in a caramel basket with wild berries",
+            "price": "$4.00",
+            "imageContainerClass": "dessert-box-4",
+            "image": "../../../assets/images/dessert/dessert-4.jpg"
+        },
+        {
+            "title": "Pancakes",
+            "description": "Tender pancakes with strawberry jam and fresh strawberries",
+            "price": "$4.50",
+            "imageContainerClass": "dessert-box-5",
+            "image": "../../../assets/images/dessert/dessert-5.jpg"
+        },
+        {
+            "title": "Honey cake",
+            "description": "Classic honey cake with delicate custard",
+            "price": "$4.50",
+            "imageContainerClass": "dessert-box-6",
+            "image": "../../../assets/images/dessert/dessert-6.jpg"
+        },
+        {
+            "title": "Chocolate cake",
+            "description": "Cake with hot chocolate filling and nuts with dried apricots",
+            "price": "$5.50",
+            "imageContainerClass": "dessert-box-7",
+            "image": "../../../assets/images/dessert/dessert-7.jpg"
+        },
+        {
+            "title": "Black forest",
+            "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
+            "price": "$6.50",
+            "imageContainerClass": "dessert-box-8",
+            "image": "../../../assets/images/dessert/dessert-8.jpg"
+        }
+    ]
+}
