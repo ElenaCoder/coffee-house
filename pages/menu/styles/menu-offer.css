@@ -70,6 +70,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -82,80 +83,11 @@
     border: 1px solid var(--border-light-color);
 }
 
-/* COFFEE */
-.card .coffee-box-1 {
+.img-wrapper {
     width: 310px;
     height: 310px;
     flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-1.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
 
-.card .coffee-box-2 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-2.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-3 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-3.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-4 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-4.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-5 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-5.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-6 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-6.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-7 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/coffee/coffee-7.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-8 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    background: url(../../../assets/images/coffee/coffee-8.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .coffee-box-1,
-.card .coffee-box-2,
-.card .coffee-box-3,
-.card .coffee-box-4,
-.card .coffee-box-5,
-.card .coffee-box-6,
-.card .coffee-box-7,
-.card .coffee-box-8 {
     border-radius: 40px;
     position: relative;
     overflow: hidden;
@@ -163,6 +95,7 @@
     transition: background-size 0.9s ease;
 }
 
+/* COFFEE */
 .card .coffee-box-1:hover,
 .card .coffee-box-2:hover,
 .card .coffee-box-3:hover,
@@ -176,49 +109,6 @@
 /* COFFEE */
 
 /* TEA */
-.card .tea-box-1 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/tea/tea-1.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .tea-box-2 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/tea/tea-2.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .tea-box-3 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/tea/tea-3.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .tea-box-4 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/tea/tea-4.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .tea-box-1,
-.card .tea-box-2,
-.card .tea-box-3,
-.card .tea-box-4 {
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    background-size: 100%;
-    transition: background-size 0.9s ease;
-}
-
 .card .tea-box-1:hover,
 .card .tea-box-2:hover,
 .card .tea-box-3:hover,
@@ -228,86 +118,6 @@
 /* /TEA */
 
 /* DESSERT */
-.card .dessert-box-1 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-1.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-2 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-2.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-3 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-3.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-4 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-4.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-5 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-5.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-6 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-6.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-7 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    background: url(../../../assets/images/dessert/dessert-7.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-8 {
-    width: 310px;
-    height: 310px;
-    flex-shrink: 0;
-    border-radius: 40px;
-    background: url(../../../assets/images/dessert/dessert-8.jpg)
-        var(--border-light-color) 50% / cover no-repeat;
-}
-
-.card .dessert-box-1,
-.card .dessert-box-2,
-.card .dessert-box-3,
-.card .dessert-box-4,
-.card .dessert-box-5,
-.card .dessert-box-6,
-.card .dessert-box-7,
-.card .dessert-box-8 {
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    background-size: 100%;
-    transition: background-size 0.9s ease;
-}
-
 .card .dessert-box-1:hover,
 .card .dessert-box-2:hover,
 .card .dessert-box-3:hover,
@@ -348,4 +158,47 @@
     margin: 0;
     font-size: 24px;
     line-height: 125%;
+}
+
+/* Media query for screens between 768px and 1439px (tablets) */
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .offer-heading {
+        max-width: 688px;
+        font-size: 60px;
+        color: var(--text-dark-color);
+        line-height: 125%;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+/* Media query for screens between 380px and 767px (smaller tablets and large mobiles) */
+@media screen and (max-width: 767px) and (min-width: 380px) {
+    .offer-heading {
+        max-width: 348px;
+        font-size: 2rem;
+        color: var(--text-dark-color);
+        line-height: 125%;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .choice-tabs {
+        width: 345px;
+    }
+}
+
+/* Media query for screens below 380px (small mobiles) */
+@media screen and (max-width: 379px) {
+    .offer-heading{
+        max-width: 280px;
+        font-size: 1.5rem;
+    }
+
+    body {
+        zoom: 0.5;
+        font-size: 0.5rem;
+    }
 }
