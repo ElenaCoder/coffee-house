@@ -2,24 +2,26 @@
 const tabs = document.querySelectorAll('.choice-tab');
 const contentWrappers = document.querySelectorAll('.content-tab');
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Add click event listeners to each tab
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', function () {
             // Remove 'active' class from all btn-tabs
-            tabs.forEach(t => t.classList.remove('active'));
+            tabs.forEach((t) => t.classList.remove('active'));
 
             // Add 'active' class to the clicked btn-tab
             tab.classList.add('active');
 
             // Hide all content wrappers
-            contentWrappers.forEach(wrapper => {
+            contentWrappers.forEach((wrapper) => {
                 wrapper.classList.add('none');
             });
 
             // Show the corresponding content wrapper based on the clicked tab's data-tab attribute
             const tabId = tab.dataset.offer;
-            const activeContent = document.querySelector(`[data-content="${tabId}"]`);
+            const activeContent = document.querySelector(
+                `[data-content="${tabId}"]`,
+            );
             if (activeContent) {
                 activeContent.classList.remove('none');
             }
@@ -51,11 +53,14 @@ divOverlay.addEventListener('click', hamburgerMenuHandler);
 
 function hamburgerMenuHandler(e) {
     let contentElement = document.querySelector('.content');
-    let contentElementWidth = parseInt(window.getComputedStyle(contentElement).width);
+    let contentElementWidth = parseInt(
+        window.getComputedStyle(contentElement).width,
+    );
 
     let viewportWidth = window.visualViewport.width;
     let burgerNavWidth = burgerNav.offsetWidth;
-    let leftPosition = (viewportWidth - burgerNavWidth - contentElementWidth) / 2 ;
+    let leftPosition =
+        (viewportWidth - burgerNavWidth - contentElementWidth) / 2;
 
     if (burgerNav.style.display === 'block') {
         burgerNav.style.display = 'none';
@@ -74,3 +79,40 @@ function hamburgerMenuHandler(e) {
     }
 }
 /*// Hamburger menu handling in HEADER section*/
+
+/*Menu handling in MENU section*/
+let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
+let teaContentWrapper = document.querySelector('.tea-content-wrapper');
+let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
+
+document.addEventListener('DOMContentLoaded', function () {
+    function createCard(item) {
+        const cardMarkup = `
+            <div class="card">
+                <div class="img-wrapper ${item.imageContainerClass}" style="background: url(${item.image}) var(--border-light-color) 50% / cover no-repeat;"></div>
+                <div class="card-content">
+                    <h3 class="card-title">${item.title}</h3>
+                    <p class="card-description">${item.description}</p>
+                    <p class="card-price">${item.price}</p>
+                </div>
+            </div>
+        `;
+
+        return cardMarkup;
+    }
+
+    function updateContent(contentWrapper, data) {
+        contentWrapper.innerHTML = data.map(createCard).join('');
+    }
+
+    fetch('../../../assets/menu-data/menu-data.json')
+        .then((response) => response.json())
+        .then((data) => {
+            // Update each content wrapper with the corresponding data
+            updateContent(coffeeContentWrapper, data.coffee);
+            updateContent(teaContentWrapper, data.tea);
+            updateContent(dessertContentWrapper, data.dessert);
+        })
+        .catch((error) => console.error('Error fetching data:', error));
+});
+/* //Menu handling in MENU section*/
