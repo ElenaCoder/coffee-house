@@ -72,7 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateSlider() {
-        const translateValue = -currentIndex * 75 + '%';
+        let translateValue;
+        const isDesktopScreen = window.innerWidth >= 1440;
+        const isTabletScreen = window.innerWidth <= 1430 &&  window.innerWidth >= 768;
+        const isMobileScreen = window.innerWidth <= 767 &&  window.innerWidth >= 380;
+        const isLessMobileScreen = window.innerWidth <= 379;
+        if (isDesktopScreen) {
+            translateValue = -currentIndex * 75 + '%';
+            // console.log(window.innerWidth, translateValue);
+        } else if(isTabletScreen) {
+            translateValue = -currentIndex * 85 + '%';
+        } else if(isMobileScreen || isLessMobileScreen) {
+            translateValue = -currentIndex * 95 + '%';
+        }
         slider.style.transform = `translateX(${translateValue})`;
     }
 });
@@ -93,7 +105,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function updateSlider() {
-        const translateValue = -currentIndex * 75 + '%';
+        let translateValue;
+        const isDesktopScreen = window.innerWidth >= 1440;
+        const isTabletScreen = window.innerWidth <= 1430 &&  window.innerWidth >= 768;
+        const isMobileScreen = window.innerWidth <= 767 &&  window.innerWidth >= 380;
+        const isLessMobileScreen = window.innerWidth <= 379;
+        if (isDesktopScreen) {
+            translateValue = -currentIndex * 75 + '%';
+            // console.log(window.innerWidth, translateValue);
+        } else if(isTabletScreen) {
+            translateValue = -currentIndex * 85 + '%';
+        } else if(isMobileScreen) {
+            translateValue = -currentIndex * 100 + '%';
+        } else {
+            translateValue = -currentIndex * 135 + '%';
+        }
         slider.style.transform = `translateX(${translateValue})`;
     }
 
@@ -104,8 +130,6 @@ document.addEventListener('DOMContentLoaded', function () {
         controls[currentIndex].classList.add('darker');
     }
 });
-// -------//FAVORITE_COFFEE SECTION 3------------
-
 // -------//SELF ASSESSMENT------------
 
 console.groupCollapsed(
