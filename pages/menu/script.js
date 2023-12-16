@@ -1,34 +1,3 @@
-// Get all tab elements and content wrappers
-const tabs = document.querySelectorAll('.choice-tab');
-const contentWrappers = document.querySelectorAll('.content-tab');
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Add click event listeners to each tab
-    tabs.forEach((tab) => {
-        tab.addEventListener('click', function () {
-            // Remove 'active' class from all btn-tabs
-            tabs.forEach((t) => t.classList.remove('active'));
-
-            // Add 'active' class to the clicked btn-tab
-            tab.classList.add('active');
-
-            // Hide all content wrappers
-            contentWrappers.forEach((wrapper) => {
-                wrapper.classList.add('none');
-            });
-
-            // Show the corresponding content wrapper based on the clicked tab's data-tab attribute
-            const tabId = tab.dataset.offer;
-            const activeContent = document.querySelector(
-                `[data-content="${tabId}"]`,
-            );
-            if (activeContent) {
-                activeContent.classList.remove('none');
-            }
-        });
-    });
-});
-
 // Add smooth scrolling behavior to anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
@@ -80,10 +49,42 @@ function hamburgerMenuHandler(e) {
 }
 /*// Hamburger menu handling in HEADER section*/
 
+// Get all tab elements and content wrappers
+const tabs = document.querySelectorAll('.choice-tab');
+const contentWrappers = document.querySelectorAll('.content-tab');
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Add click event listeners to each tab
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', function () {
+            // Remove 'active' class from all btn-tabs
+            tabs.forEach((t) => t.classList.remove('active'));
+
+            // Add 'active' class to the clicked btn-tab
+            tab.classList.add('active');
+
+            // Hide all content wrappers
+            contentWrappers.forEach((wrapper) => {
+                wrapper.classList.add('none');
+            });
+
+            // Show the corresponding content wrapper based on the clicked tab's data-tab attribute
+            const tabId = tab.dataset.offer;
+            const activeContent = document.querySelector(
+                `[data-content="${tabId}"]`,
+            );
+            if (activeContent) {
+                activeContent.classList.remove('none');
+            }
+        });
+    });
+});
+
 /*Menu handling in MENU section*/
 let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
 let teaContentWrapper = document.querySelector('.tea-content-wrapper');
 let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
+let loadMoreBtn = document.querySelector('.load-more-btn');
 
 document.addEventListener('DOMContentLoaded', function () {
     function createCard(item) {
