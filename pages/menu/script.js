@@ -53,6 +53,10 @@ function hamburgerMenuHandler(e) {
 const tabs = document.querySelectorAll('.choice-tab');
 const contentWrappers = document.querySelectorAll('.content-tab');
 
+function isLoadBtnNeed(cardAmount) {
+    return cardAmount > 5;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Add click event listeners to each tab
     tabs.forEach((tab) => {
@@ -76,6 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
             if (activeContent) {
                 activeContent.classList.remove('none');
             }
+
+            const cardAmount = cardAmounts[tabId];
+            if (
+                isLargeScreen ||
+                (isSmallScreen && !isLoadBtnNeed(cardAmount))
+            ) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'flex';
+            }
         });
     });
 });
@@ -84,7 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
 let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
 let teaContentWrapper = document.querySelector('.tea-content-wrapper');
 let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
+
 let loadMoreBtn = document.querySelector('.load-more-btn');
+const isLargeScreen = window.innerWidth >= 1400;
+const isSmallScreen = window.innerWidth < 1400;
+const initialCardCount = 4;
+const cardAmounts = { coffee: 0, tea: 0, dessert: 0 };
 
 document.addEventListener('DOMContentLoaded', function () {
     function createCard(item) {
@@ -102,17 +121,24 @@ document.addEventListener('DOMContentLoaded', function () {
         return cardMarkup;
     }
 
-    function updateContent(contentWrapper, data) {
-        contentWrapper.innerHTML = data.map(createCard).join('');
+    function updateContent(contentWrapper, data, tabId) {
+        // Load all cards initially on large screens
+        const initialSubset = isLargeScreen
+            ? data
+            : data.slice(0, initialCardCount);
+        contentWrapper.innerHTML = initialSubset.map(createCard).join('');
+
+        // Update the card amount
+        cardAmounts[tabId] = data.length;
     }
 
     fetch('../../../assets/menu-data/menu-data.json')
         .then((response) => response.json())
         .then((data) => {
             // Update each content wrapper with the corresponding data
-            updateContent(coffeeContentWrapper, data.coffee);
-            updateContent(teaContentWrapper, data.tea);
-            updateContent(dessertContentWrapper, data.dessert);
+            updateContent(coffeeContentWrapper, data.coffee, 'coffee');
+            updateContent(teaContentWrapper, data.tea, 'tea');
+            updateContent(dessertContentWrapper, data.dessert, 'dessert');
         })
         .catch((error) => console.error('Error fetching data:', error));
 });
