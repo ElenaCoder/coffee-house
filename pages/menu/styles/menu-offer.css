@@ -95,44 +95,9 @@
     border-radius: 40px;
     position: relative;
     overflow: hidden;
-    background-size: 100%;
-    transition: background-size 0.9s ease;
+    /* background-size: 100%;
+    transition: background-size 2s ease; */
 }
-
-/* COFFEE */
-.card .coffee-box-1:hover,
-.card .coffee-box-2:hover,
-.card .coffee-box-3:hover,
-.card .coffee-box-4:hover,
-.card .coffee-box-5:hover,
-.card .coffee-box-6:hover,
-.card .coffee-box-7:hover,
-.card .coffee-box-8:hover {
-    background-size: 110%;
-}
-/* COFFEE */
-
-/* TEA */
-.card .tea-box-1:hover,
-.card .tea-box-2:hover,
-.card .tea-box-3:hover,
-.card .tea-box-4:hover {
-    background-size: 110%;
-}
-/* /TEA */
-
-/* DESSERT */
-.card .dessert-box-1:hover,
-.card .dessert-box-2:hover,
-.card .dessert-box-3:hover,
-.card .dessert-box-4:hover,
-.card .dessert-box-5:hover,
-.card .dessert-box-6:hover,
-.card .dessert-box-7:hover,
-.card .dessert-box-8:hover {
-    background-size: 110%;
-}
-/* /DESSERT */
 
 .card-content {
     height: 196px;
