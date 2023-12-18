@@ -136,6 +136,49 @@ document.addEventListener('DOMContentLoaded', function () {
             updateContent(coffeeContentWrapper, data.coffee, 'coffee');
             updateContent(teaContentWrapper, data.tea, 'tea');
             updateContent(dessertContentWrapper, data.dessert, 'dessert');
+
+            // Attach event listener to the "Load More" button
+            loadMoreBtn.addEventListener('click', function () {
+                // Find the visible content wrapper
+                const visibleContentWrapper = Array.from(contentWrappers).find(
+                    (wrapper) => !wrapper.classList.contains('none'),
+                );
+
+                if (visibleContentWrapper) {
+                    const tabId = visibleContentWrapper.dataset.content;
+
+                    // Fetch and append more cards based on screen size
+                    fetchAndAppendMoreCards(
+                        visibleContentWrapper,
+                        data[tabId],
+                        initialCardCount,
+                    );
+                }
+            });
+
+            function fetchAndAppendMoreCards(contentWrapper, data, cardCount) {
+                // Fetch the next set of cards
+                const nextSet = data.slice(cardCount);
+
+                // Append the new cards to the content wrapper
+                contentWrapper.innerHTML += nextSet.map(createCard).join('');
+
+                let totalCardAmount = data.length;
+
+                // Check if the quantity is more than total card amount (8 in our case) and hide/remove the "Load More" button
+                const totalCards =
+                    contentWrapper.querySelectorAll('.card').length;
+                if (totalCards >= totalCardAmount) {
+                    hideLoadMoreBtn();
+                }
+            }
+
+            function hideLoadMoreBtn() {
+                // Set the "Load More" button to display: none
+                if (loadMoreBtn) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
         })
         .catch((error) => console.error('Error fetching data:', error));
 });
