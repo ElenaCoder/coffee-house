@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    fetch('../../../assets/menu-data/menu-data.json')
+    fetch('../../assets/menu-data/menu-data.json')
         .then((response) => response.json())
         .then((data) => {
             // Update each content wrapper with the corresponding data
