@@ -106,7 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
     function createCard(item) {
         const cardMarkup = `
             <div class="card">
-                <div class="img-wrapper ${item.imageContainerClass}" style="background: url(${item.image}) var(--border-light-color) 50% / cover no-repeat;"></div>
+                <div class="img-wrapper ${item.imageContainerClass}" style="
+                    background-image: url(${item.image});
+                    background-color: var(--border-light-color);
+                    background-position: 50%;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    transition: background-size 0.5s ease;
+                    background-size: 100%"
+                ></div>
                 <div class="card-content">
                     <h3 class="card-title">${item.title}</h3>
                     <p class="card-description">${item.description}</p>
@@ -127,6 +135,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Update the card amount
         cardAmounts[tabId] = data.length;
+
+        attachEventListeners();
+    }
+
+    function attachEventListeners() {
+        let cards = document.querySelectorAll('.card');
+        cards.forEach((card) => {
+            card.addEventListener('mouseenter', function (event) {
+                this.querySelector('.img-wrapper').style.backgroundSize =
+                    '110%';
+            });
+
+            card.addEventListener('mouseleave', function (event) {
+                this.querySelector('.img-wrapper').style.backgroundSize =
+                    '100%';
+            });
+        });
     }
 
     fetch('../../../assets/menu-data/menu-data.json')
@@ -153,6 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         data[tabId],
                         initialCardCount,
                     );
+
+                    // Attach event listeners after loading more cards
+                    attachEventListeners();
                 }
             });
 
@@ -182,10 +210,10 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch((error) => console.error('Error fetching data:', error));
 
-        function handleResize() {
-            location.reload();
-        }
+    function handleResize() {
+        location.reload();
+    }
 
-        window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 });
 /* //Menu handling in MENU section*/
