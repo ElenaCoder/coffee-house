@@ -49,9 +49,19 @@ function hamburgerMenuHandler(e) {
 }
 /*// Hamburger menu handling in HEADER section*/
 
-// Get all tab elements and content wrappers
+/*Menu handling in MENU section*/
 const tabs = document.querySelectorAll('.choice-tab');
 const contentWrappers = document.querySelectorAll('.content-tab');
+
+let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
+let teaContentWrapper = document.querySelector('.tea-content-wrapper');
+let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
+
+let loadMoreBtn = document.querySelector('.load-more-btn');
+const isLargeScreen = window.innerWidth >= 1400;
+const isSmallScreen = window.innerWidth < 1400;
+const initialCardCount = 4;
+const cardAmounts = { coffee: 0, tea: 0, dessert: 0 };
 
 function isLoadBtnNeed(cardAmount) {
     return cardAmount > 5;
@@ -92,20 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
 
-/*Menu handling in MENU section*/
-let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
-let teaContentWrapper = document.querySelector('.tea-content-wrapper');
-let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
-
-let loadMoreBtn = document.querySelector('.load-more-btn');
-const isLargeScreen = window.innerWidth >= 1400;
-const isSmallScreen = window.innerWidth < 1400;
-const initialCardCount = 4;
-const cardAmounts = { coffee: 0, tea: 0, dessert: 0 };
-
-document.addEventListener('DOMContentLoaded', function () {
     function createCard(item) {
         const cardMarkup = `
             <div class="card">
