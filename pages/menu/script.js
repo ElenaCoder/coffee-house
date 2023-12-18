@@ -181,5 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
         .catch((error) => console.error('Error fetching data:', error));
+
+        function handleResize() {
+            location.reload();
+        }
+
+        window.addEventListener('resize', handleResize);
 });
 /* //Menu handling in MENU section*/
