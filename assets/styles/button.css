@@ -180,11 +180,11 @@
 }
 
 .arrow.next:hover img{
-    content: url('../../../assets/icons/arrow-next-onhover.svg');
+    content: url('../../assets/icons/arrow-next-onhover.svg');
 
 }
 
 .arrow.prev:hover img{
-    content: url('../../../assets/icons/arrow-next-onhover.svg');
+    content: url('../../assets/icons/arrow-next-onhover.svg');
 
 }
