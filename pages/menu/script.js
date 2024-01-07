@@ -59,8 +59,8 @@ let teaContentWrapper = document.querySelector('.tea-content-wrapper');
 let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
 
 let loadMoreBtn = document.querySelector('.load-more-btn');
-const isLargeScreen = window.innerWidth >= 1400;
-const isSmallScreen = window.innerWidth < 1400;
+const isLargeScreen = window.innerWidth >= 1440;
+const isSmallScreen = window.innerWidth < 1440;
 const initialCardCount = 4;
 const cardAmounts = { coffee: 0, tea: 0, dessert: 0 };
 
