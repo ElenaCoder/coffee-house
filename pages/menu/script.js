@@ -162,6 +162,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const modalElement = document.querySelector(`.${productId}`);
         const overlay = document.querySelector('.overlayModalWindow');
 
+        // Disable vertical scroll when the modal is open
+        disableScroll();
+
         if (modalElement && overlay) {
             modalElement.style.display = 'block';
             overlay.style.display = 'block';
@@ -183,10 +186,23 @@ document.addEventListener('DOMContentLoaded', function () {
         const modalElement = document.querySelector(`.modal.${productId}`);
         const overlay = document.querySelector('.overlayModalWindow');
 
+        // Enable vertical scroll when the modal is closed
+        enableScroll();
+
         if (modalElement && overlay) {
             modalElement.style.display = 'none';
             overlay.style.display = 'none';
         }
+    }
+
+    // Function to disable vertical scroll
+    function disableScroll() {
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to enable vertical scroll
+    function enableScroll() {
+        document.body.style.overflow = '';
     }
 
     function attachEventListeners() {
