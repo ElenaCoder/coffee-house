@@ -53,6 +53,7 @@ function hamburgerMenuHandler(e) {
 const tabs = document.querySelectorAll('.choice-tab');
 const contentWrappers = document.querySelectorAll('.content-tab');
 
+const offerContentWrapper = document.querySelector('.offer-content-wrapper');
 let coffeeContentWrapper = document.querySelector('.coffee-content-wrapper');
 let teaContentWrapper = document.querySelector('.tea-content-wrapper');
 let dessertContentWrapper = document.querySelector('.dessert-content-wrapper');
@@ -105,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createCard(item) {
         const cardMarkup = `
-            <div class="card">
-                <div class="img-wrapper ${item.imageContainerClass}" style="
+            <div class="card" id=${item.productId}>
+                <div class="img-wrapper" style="
                     background-image: url(${item.image});
                     background-color: var(--border-light-color);
                     background-position: 50%;
@@ -116,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     background-size: 100%"
                 ></div>
                 <div class="card-content">
-                    <h3 class="card-title">${item.title}</h3>
+                    <h3 class="card-name">${item.name}</h3>
                     <p class="card-description">${item.description}</p>
                     <p class="card-price">${item.price}</p>
                 </div>
@@ -124,6 +125,19 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         return cardMarkup;
+    }
+
+    function createModal(item) {
+        const modalMarkup = `
+          <div class="modal ${item.productId}">
+            <div class="modal-content">
+              <div class="modalContent">${item.name}</div>
+              <button class="close">Close</button>
+            </div>
+          </div>
+        `;
+
+        return modalMarkup;
     }
 
     function updateContent(contentWrapper, data, tabId) {
@@ -136,7 +150,43 @@ document.addEventListener('DOMContentLoaded', function () {
         // Update the card amount
         cardAmounts[tabId] = data.length;
 
+        // Load all modal windows
+        contentWrapper.innerHTML += data
+            .map((item) => createModal(item))
+            .join('');
+
         attachEventListeners();
+    }
+
+    function openModal(productId) {
+        const modalElement = document.querySelector(`.${productId}`);
+        const overlay = document.querySelector('.overlayModalWindow');
+
+        if (modalElement && overlay) {
+            modalElement.style.display = 'block';
+            overlay.style.display = 'block';
+
+            // Attach event listener to the close button of the newly added modal
+            const closeModalBtn = modalElement.querySelector('.close');
+            closeModalBtn.addEventListener('click', function () {
+                closeModal(productId);
+            });
+
+            // Close modal if clicking on the overlay
+            overlay.addEventListener('click', function () {
+                closeModal(productId);
+            });
+        }
+    }
+
+    function closeModal(productId) {
+        const modalElement = document.querySelector(`.modal.${productId}`);
+        const overlay = document.querySelector('.overlayModalWindow');
+
+        if (modalElement && overlay) {
+            modalElement.style.display = 'none';
+            overlay.style.display = 'none';
+        }
     }
 
     function attachEventListeners() {
@@ -151,16 +201,47 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.querySelector('.img-wrapper').style.backgroundSize =
                     '100%';
             });
+
+            card.addEventListener('click', function () {
+                const productId = this.getAttribute('id');
+                const match = productId.match(/^([^-]+)/);
+                const activeTab = match ? match[1] : null;
+                const visibleContentWrapper = Array.from(contentWrappers).find(
+                    (element) =>
+                        element.classList.contains(
+                            `${activeTab}-content-wrapper`,
+                        ),
+                );
+                console.log(productId);
+
+                // Toggle the modal
+                if (visibleContentWrapper) {
+                    const modalElement = document.querySelector(
+                        `.${productId}`,
+                    );
+                    if (modalElement) {
+                        openModal(productId);
+                    } else {
+                        closeModal(productId);
+                    }
+                }
+            });
         });
     }
 
-    fetch('../../assets/menu-data/menu-data.json')
+    fetch('../../assets/menu-data/products.json')
         .then((response) => response.json())
         .then((data) => {
+            let dataCoffee = data.filter((item) => item.category === 'coffee');
+            let dataTea = data.filter((item) => item.category === 'tea');
+            let dataDessert = data.filter(
+                (item) => item.category === 'dessert',
+            );
+
             // Update each content wrapper with the corresponding data
-            updateContent(coffeeContentWrapper, data.coffee, 'coffee');
-            updateContent(teaContentWrapper, data.tea, 'tea');
-            updateContent(dessertContentWrapper, data.dessert, 'dessert');
+            updateContent(coffeeContentWrapper, dataCoffee, 'coffee');
+            updateContent(teaContentWrapper, dataTea, 'tea');
+            updateContent(dessertContentWrapper, dataDessert, 'dessert');
 
             // Attach event listener to the "Load More" button
             loadMoreBtn.addEventListener('click', function () {
@@ -171,11 +252,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (visibleContentWrapper) {
                     const tabId = visibleContentWrapper.dataset.content;
+                    const visibleData = data.filter(
+                        (item) => item.category === `${tabId}`,
+                    );
 
                     // Fetch and append more cards based on screen size
                     fetchAndAppendMoreCards(
                         visibleContentWrapper,
-                        data[tabId],
+                        visibleData,
                         initialCardCount,
                     );
 
