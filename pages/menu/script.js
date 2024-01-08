@@ -1,3 +1,5 @@
+import { createModal } from './createModal.js';
+
 // Add smooth scrolling behavior to anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
@@ -125,19 +127,6 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
 
         return cardMarkup;
-    }
-
-    function createModal(item) {
-        const modalMarkup = `
-          <div class="modal ${item.productId}">
-            <div class="modal-content">
-              <div class="modalContent">${item.name}</div>
-              <button class="close">Close</button>
-            </div>
-          </div>
-        `;
-
-        return modalMarkup;
     }
 
     function updateContent(contentWrapper, data, tabId) {
