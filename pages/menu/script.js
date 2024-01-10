@@ -1,5 +1,11 @@
 import { createModal } from './createModal.js';
 import { createCard } from './createCard.js';
+import {
+    resetSelectedSizeItem,
+    updateTotalPrice,
+    attachSizeEventListeners,
+    attachAdditivesEventListeners,
+} from './sizeAdditives.js';
 
 // Add smooth scrolling behavior to anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -122,12 +128,15 @@ document.addEventListener('DOMContentLoaded', function () {
             .map((item) => createModal(item))
             .join('');
 
-        attachEventListeners();
+        attachCardEventListeners(data);
     }
 
-    function openModal(productId) {
+    function openModal(data, productId) {
         const modalElement = document.querySelector(`.${productId}`);
         const overlay = document.querySelector('.overlayModalWindow');
+        const initialTotal = modalElement
+            .querySelector('.total-result')
+            .innerHTML.split('$')[1];
 
         // Disable vertical scroll when the modal is open
         disableScroll();
@@ -139,20 +148,67 @@ document.addEventListener('DOMContentLoaded', function () {
             // Attach event listener to the close button of the newly added modal
             const closeModalBtn = modalElement.querySelector('.close');
             closeModalBtn.addEventListener('click', function () {
-                closeModal(productId);
+                closeModal(modalElement, initialTotal);
             });
 
             // Close modal if clicking on the overlay
             overlay.addEventListener('click', function () {
-                closeModal(productId);
+                closeModal(modalElement, initialTotal);
             });
+
+            const isTargetData = data
+                .map((item) => item.productId)
+                .some((element) =>
+                    element.includes(
+                        `${productId}`.split('').slice(0, -2).join(''),
+                    ),
+                );
+            const targetItem = isTargetData
+                ? data.filter((element) =>
+                      element.productId.includes(`${productId}`),
+                  )[0]
+                : null;
+
+            // Check if event listeners are already attached
+            const sizeListenersAttached =
+                offerContentWrapper.dataset.sizeListenersAttached;
+            const additiveListenersAttached =
+                offerContentWrapper.dataset.additiveListenersAttached;
+
+            if (!sizeListenersAttached && isTargetData) {
+                // Attach event listeners to size buttons
+                attachSizeEventListeners(offerContentWrapper, initialTotal);
+                offerContentWrapper.dataset.sizeListenersAttached = true;
+            }
+
+            if (!additiveListenersAttached && isTargetData) {
+                // Attach event listeners to additive buttons
+                attachAdditivesEventListeners(offerContentWrapper, initialTotal);
+                offerContentWrapper.dataset.additiveListenersAttached = true;
+            }
         }
     }
 
-    function closeModal(productId) {
-        const modalElement = document.querySelector(`.modal.${productId}`);
+    function clearModalSettings(modalElement, initialTotal) {
+        const totalResultElement = modalElement.querySelector('.total-result');
+        let selectedSizeAdditive = [
+            ...modalElement.querySelectorAll('.m'),
+            ...modalElement.querySelectorAll('.l'),
+            ...modalElement.querySelectorAll('.additive-option'),
+        ];
+
+        selectedSizeAdditive.forEach((elem) => elem.classList.remove('active'));
+        modalElement.querySelector('.s').classList.add('active');
+        resetSelectedSizeItem();
+
+        totalResultElement.textContent = `$${initialTotal}`;
+    }
+
+    function closeModal(modalElement, initialTotal) {
+        // const modalElement = document.querySelector(`.modal.${productId}`);
         const overlay = document.querySelector('.overlayModalWindow');
 
+        clearModalSettings(modalElement, initialTotal);
         // Enable vertical scroll when the modal is closed
         enableScroll();
 
@@ -172,9 +228,12 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     }
 
-    function attachEventListeners() {
-        let cards = document.querySelectorAll('.card');
-        cards.forEach((card) => {
+    function attachCardEventListeners(data) {
+        data.forEach((item) => {
+            let card = document.querySelector(`#${item.productId}`);
+            if (!card) {
+                return;
+            }
             card.addEventListener('mouseenter', function (event) {
                 this.querySelector('.img-wrapper').style.backgroundSize =
                     '110%';
@@ -184,32 +243,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.querySelector('.img-wrapper').style.backgroundSize =
                     '100%';
             });
-
-            card.addEventListener('click', function () {
-                const productId = this.getAttribute('id');
-                const match = productId.match(/^([^-]+)/);
-                const activeTab = match ? match[1] : null;
-                const visibleContentWrapper = Array.from(contentWrappers).find(
-                    (element) =>
-                        element.classList.contains(
-                            `${activeTab}-content-wrapper`,
-                        ),
-                );
-                console.log(productId);
-
-                // Toggle the modal
-                if (visibleContentWrapper) {
-                    const modalElement = document.querySelector(
-                        `.${productId}`,
-                    );
-                    if (modalElement) {
-                        openModal(productId);
-                    } else {
-                        closeModal(productId);
-                    }
-                }
-            });
         });
+
+        // common parent of all cards
+        const tabsContainer = document.querySelector('.offer-content-wrapper');
+
+        // Attach event listeners only if they are not already attached
+        if (!tabsContainer.dataset.listenersAttached) {
+            tabsContainer.addEventListener(
+                'click',
+                tabsContainerListenerHandler,
+            );
+            tabsContainer.dataset.listenersAttached = true;
+        }
+
+        // Attach event listener to a common parent of all cards
+        function tabsContainerListenerHandler(event) {
+            const card = event.target.closest('.card');
+            const productId = card?.getAttribute('id');
+
+            // Toggle the modal
+            if (productId) {
+                const modalElement = document.querySelector(`.${productId}`);
+                if (modalElement) {
+                    openModal(data, productId);
+                } else {
+                    closeModal(productId);
+                }
+            }
+        }
     }
 
     fetch('../../assets/menu-data/products.json')
@@ -247,7 +309,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     );
 
                     // Attach event listeners after loading more cards
-                    attachEventListeners();
+                    // const restCardsData = (tabId === 'coffee'  || tabId === 'dessert') ? visibleData.slice(initialCardCount) : visibleData;
+                    // // attachCardEventListeners(restCardsData);
                 }
             });
 
