@@ -15,62 +15,19 @@ export function createModal(item) {
             <div class="description-modal">${item.description} Fragrant black coffee with Jameson Irish </div>
             <div class="subtitle-modal">Size</div>
             <div class="size-btn-block">
-                <div class="s active" data-offer="s-size">
-                    <img
-                        src="../../assets/icons/s-size-icon-dark.svg"
-                        width="116"
-                        height="46"
-                        alt="s-size icon"
-                    />
-                </div>
-                <div class="m active" data-offer="m-size">
-                    <img
-                        src="../../assets/icons/m-size-icon-light.svg"
-                        width="117"
-                        height="46"
-                        alt="s-size icon"
-                    />
-                </div>
-                <div class="l active" data-offer="l-size">
-                    <img
-                        src="../../assets/icons/l-size-icon-light.svg"
-                        width="117
-                        "
-                        height="46"
-                        alt="s-size icon"
-                    />
-                </div>
+                <div class="s active size-option" data-offer="s-size" data-price="0.00"></div>
+                <div class="m size-option" data-offer="m-size" data-price="0.50"></div>
+                <div class="l size-option" data-offer="l-size" data-price="1.00"></div>
             </div>
             <div class="subtitle-modal">Additives</div>
             <div class="additives-btn-block">
-                <div class="additive-one active" data-offer="one-sugar">
-                    <img
-                        src="../../assets/icons/1-additives-sugar-light.svg"
-                        width="108"
-                        height="46"
-                        alt="sugar-additives icon"
-                    />
-                </div>
-                <div class="additive-two active" data-offer="two-cinnamon">
-                    <img
-                        src="../../assets/icons/2-additives-cinnamon-light.svg"
-                        width="141"
-                        height="46"
-                        alt="cinnamon-additives icon"
-                    />
-                </div>
-                <div class="additive-three active" data-offer="three-syrup">
-                    <img
-                        src="../../assets/icons/3-additives-syrup-light.svg"
-                        width="108"
-                        height="46"
-                        alt="syrup-additives icon"
-                    />
-                </div>
+                <div class="additive-one additive-option" data-offer="one-sugar" data-price="0.50"></div>
+                <div class="additive-two additive-option" data-offer="two-cinnamon" data-price="0.50"></div>
+                <div class="additive-three additive-option" data-offer="three-syrup" data-price="0.50"></div>
             </div>
             <div class="total-block">
                 <p>Total:</p>
-                <p class="total-result">$${item.price}</p>
+                <p class="total-result" data-priceInitial="${item.price}">$${item.price}</p>
             </div>
             <div class="warning">
                 <div class="exclamation-icon">
